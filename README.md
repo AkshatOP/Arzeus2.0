@@ -1,3 +1,4 @@
+# economy-bot
 # MADE BY [YASHRAJ GAMING](https://m.youtube.com/channel/UCq6l5VljzI5mb7jdCeWcmew)
 How to setit up video totorial!
 
