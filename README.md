@@ -2,7 +2,7 @@
 # MADE BY [YASHRAJ GAMING](https://m.youtube.com/channel/UCq6l5VljzI5mb7jdCeWcmew)
 How to setit up video totorial!
 
-Link:- [https://www.youtube.com/watch?v=y1KrR7WFzQk](https://www.youtube.com/watch?v=y1KrR7WFzQk)
+Link:- [https://youtu.be/0J_u3KNEa8U](https://youtu.be/0J_u3KNEa8U)
 
 # SUPPORT SERVER
 LINK:- [https://discord.gg/6BvpKYd](https://discord.gg/6BvpKYd)
