@@ -27,15 +27,25 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 })
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers! made by AK`);
-  bot.user.setActivity(`Simple Economy bot`);
-  bot.user.setStatus('idle');
+
+  bot.on("ready", ready => {
+bot.user.setActivity(`ARZEUS 2.0`, {
+
+type: "STREAMING",
+
+url: "https://www.youtube.com/channel/UCF8EBnJskNhd-JON7D4CgpA"})
+
+    .then(presence => console.log(`${presence.game ? presence.game.none : 'YOUR BOT IS READY ! xD'}`))
+
+    .catch(console.error);
+ console.log(`${bot.user.username} is online on ${bot.guilds.size} servers! made by AK`);
+
+});
 
   bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    let prefix = botconfig.prefix
+    let prefix = process.env.prefix
     let messageArray = message.content.split(" ");
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
@@ -55,7 +65,7 @@ bot.on("ready", async () => {
   
   } catch (e) {
   }}
-  )})
+  )
 
 
 bot.login(process.env.token);
