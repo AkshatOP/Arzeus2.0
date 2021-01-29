@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 
     let embedbank = new Discord.MessageEmbed()
     .setColor('#FFFFFF')
-    .setDescription("<:Cross:618736602901905418> You don't have any money to deposit")
+    .setDescription("<:arzeus_cross:804612025379586058> You don't have any money to deposit")
 
     if(money === 0) return message.channel.send(embedbank)
 
@@ -24,14 +24,14 @@ module.exports.run = async (bot, message, args) => {
     db.subtract(`money_${message.guild.id}_${user.id}`, money)
     let embed5 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Check:618736570337591296> You have deposited all your coins into your bank`);
+  .setDescription(`<:arzeus_tick:804612374518169620> You have deposited all your money into your bank`);
   message.channel.send(embed5)
   
   } else {
   
   let embed2 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> Specify an amount to deposit`);
+  .setDescription(`<:arzeus_cross:804612025379586058> Specify an amount to deposit`);
   
   if (!args[0]) {
       return message.channel.send(embed2)
@@ -39,14 +39,14 @@ module.exports.run = async (bot, message, args) => {
   }
   let embed3 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> You can't deposit negative money`);
+  .setDescription(`<:arzeus_cross:804612025379586058> You can't deposit negative money`);
 
   if (message.content.includes('-')) { 
       return message.channel.send(embed3)
   }
   let embed4 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> You don't have that much money`);
+  .setDescription(`<:arzeus_cross:804612025379586058> You don't have that much money`);
 
   if (member < args[0]) {
       return message.channel.send(embed4)
@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
 
   let embed5 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Check:618736570337591296> You have deposited ${args[0]} coins into your bank`);
+  .setDescription(`<:arzeus_tick:804612374518169620> You have deposited ${args[0]} <:arzeus_coin:804370629654347788> into your bank`);
 
   message.channel.send(embed5)
   db.add(`bank_${message.guild.id}_${user.id}`, args[0])

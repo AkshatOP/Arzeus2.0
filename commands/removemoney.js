@@ -3,7 +3,7 @@ const db = require("quick.db");
 
 module.exports.run = async (bot, message, args) => {
   if(!message.content.startsWith('e!'))return;  
-  let ownerID = '618463472165978132'
+  let ownerID = '785725873851990017'
   if(message.author.id !== ownerID) return;
 
   let user = message.mentions.members.first() || message.author;
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
     let moneyEmbed = new Discord.MessageEmbed()
     .setColor("#FFFFFF")
-    .setDescription(`<:Check:618736570337591296> Removed ${args[1]} coins\n\nNew Balance: ${bal}`);
+    .setDescription(`<:arzeus_tick:804612374518169620> Removed ${args[1]} <:arzeus_coin:804370629654347788>\n\nNew Balance: ${bal} <:arzeus_coin:804370629654347788>`);
     message.channel.send(moneyEmbed)
 
 };
