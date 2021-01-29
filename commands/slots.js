@@ -3,7 +3,7 @@ const db = require("quick.db");
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.content.startsWith('e!'))return;  
+ //   if(!message.content.startsWith('e!'))return;  
 
     let user = message.author;
     let moneydb = await db.fetch(`money_${message.guild.id}_${user.id}`)

@@ -68,4 +68,19 @@ url: "https://www.youtube.com/channel/UCF8EBnJskNhd-JON7D4CgpA"})
   )
 
 
+bot.on("message", message => {
+   if (message.content === `<@!804254260308082719>`) {
+      const embed = new Discord.MessageEmbed()
+    .setColor("GOLD")
+    .setTitle(`${bot.user.username}`)
+    .setDescription(`Hello trainer! This is official bot of server ArZeus 2.0 . My prefix is **Az!**. You can type **Az!help** to view bot commands. In case of any error then DM <@721675303486750730>`)
+    .setFooter(`Requested by ${message.author.username} `)
+    .setTimestamp()
+      
+    return  message.channel.send(embed)
+   }
+});
+
+
+
 bot.login(process.env.token);
