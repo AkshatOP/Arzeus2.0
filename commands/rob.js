@@ -17,13 +17,13 @@ if (author !== null && timeout - (Date.now() - author) > 0) {
 
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("#FFFFFF")
-    .setDescription(`<:Cross:618736602901905418> You have already robbed someone\n\nTry again in ${time.minutes}m ${time.seconds}s `);
+    .setDescription(`<:arzeus_cross:804612025379586058> You have already robbed someone\n\nTry again in ${time.minutes}m ${time.seconds}s `);
     message.channel.send(timeEmbed)
   } else {
 
 let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> You need atleast 200 coins in your wallet to rob someone`);
+  .setDescription(`<:arzeus_cross:804612025379586058> You need atleast 200 coins in your wallet to rob someone`);
 
 if (author2 < 200) {
     return message.channel.send(moneyEmbed)
@@ -31,7 +31,7 @@ if (author2 < 200) {
 }
 let moneyEmbed2 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> ${user.user.username} does not have anything you can rob`);
+  .setDescription(`<:arzeus_cross:804612025379586058> ${user.user.username} does not have anything you can rob`);
 if (targetuser < 0) {
     return message.channel.send(moneyEmbed2)
 }
@@ -39,7 +39,7 @@ if (targetuser < 0) {
 
 
 let vip = await db.fetch(`bronze_${user.id}`)
-if(vip === true) random = Math.floor(Math.random() * 200) + 1;
+if(vip === true)  random = Math.floor(Math.random() * 200) + 1;
 if (vip === null) random = Math.floor(Math.random() * 100) + 1;
 
 let embed = new Discord.MessageEmbed()
