@@ -10,10 +10,10 @@ module.exports.run = async (bot, message, args) => {
 
     let Embed = new Discord.MessageEmbed()
     .setColor("#FFFFFF")
-    .setDescription(`<:arzeus_cross:804612025379586058> You need 2000 coins to purchase Bronze VIP`);
+    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 coins to purchase Bronze VIP`);
 
-    if (args[0] == 'bronze') {
-        if (author < 3500) return message.channel.send(Embed)
+    if (args[0] == 'giratina') {
+        if (author < 30000) return message.channel.send(Embed)
         
         db.fetch(`bronze_${message.guild.id}_${user.id}`);
         db.set(`bronze_${message.guild.id}_${user.id}`, true)
