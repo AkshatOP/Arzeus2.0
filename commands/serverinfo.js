@@ -25,7 +25,7 @@ const db = require('quick.db');
         embed.setColor("GOLD")
         embed.setDescription(`**Server Owner** - <@785725873851990017> & <@705408504156127273> \n
                 **Server CO-Owner** - <@721675303486750730> \n
-                **CREATED AT** - ${message.guild.createdAt.toLocaleString()} \n
+                **CREATED AT** - ${message.guild.createdAt} \n
                 **Rules Channel** - <#801723660984516648> \n
                 **Server Updates Channel** - <#801723661593477131> \n
                 **Server Region** - ${message.guild.region} \n

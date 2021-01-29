@@ -7,12 +7,13 @@ const Discord = require("discord.js");
 
 //execute: async (client, message, args) => {
 
-  //if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(`❌ | `+`You Require Manage Messages Permission to use this Command`)
+  //
 
 // await  message.delete()
 
 module.exports.run = async (bot, message, args) => {    
 
+  if(!message.member.permission.has("MANAGE_MESSAGES")) return message.channel.send(`❌ | `+`You Require Manage Messages Permission to use this Command`)
 
    let color = message.content.split(" ").slice(1).join(" ")
   
