@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
   let vip = await db.fetch(`giratina_${message.guild.id}_${user.id}`)
     if(vip === null) vip = 'None'
-    if(vip === true) vip = 'giratina'
+    if(vip === true) vip = '<@&801699712314638347>'
 
   let shoes = await db.fetch(`nikes_${message.guild.id}_${user.id}`)
   if(shoes === null) shoes = '0'

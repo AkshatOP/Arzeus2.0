@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 
 module.exports.run = async (bot, message, args) => {
-  if(!message.content.startsWith('e!'))return;  
-  let ownerID = '785725873851990017'
+  //if(!message.content.startsWith('e!'))return;  
+  let ownerID = ['785725873851990017' , '721675303486750730']
   if(message.author.id !== ownerID) return;
 
   let user = message.mentions.members.first() || message.author;

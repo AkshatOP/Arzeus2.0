@@ -3,6 +3,9 @@ const db = require('quick.db');
 
 exports.run = async (bot, message, args) => {
   
+ let ownerID = ['785725873851990017' , '721675303486750730']
+  if(message.author.id !== ownerID) return;
+  
  if (!args[0]) return message.reply('Enter a valid amount');
 
  if (!message.member.permissions.has('ADMINISTRATOR')) {
