@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   let member = db.fetch(`money_${message.guild.id}_${message.author.id}`)
 
   let embed1 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> Mention someone to pay`);
 
   if (!user) {

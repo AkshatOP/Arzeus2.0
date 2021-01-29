@@ -15,12 +15,12 @@ module.exports.run = async (bot, message, args) => {
     let time = ms(timeout - (Date.now() - weekly));
   
     let timeEmbed = new Discord.MessageEmbed()
-    .setColor("#FFFFFF")
+    .setColor("GOLD")
     .setDescription(`<:Cross:618736602901905418> You have already collected your weekly reward\n\nCollect it again in ${time.days}d ${time.hours}h ${time.minutes}m ${time.seconds}s `);
     message.channel.send(timeEmbed)
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:Check:618736570337591296> You've collected your weekly reward of ${amount} coins`);
   message.channel.send(moneyEmbed)
   db.add(`money_${message.guild.id}_${user.id}`, amount)

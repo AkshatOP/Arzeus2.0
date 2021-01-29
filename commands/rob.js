@@ -16,13 +16,13 @@ if (author !== null && timeout - (Date.now() - author) > 0) {
     let time = ms(timeout - (Date.now() - author));
 
     let timeEmbed = new Discord.MessageEmbed()
-    .setColor("#FFFFFF")
+    .setColor("GOLD")
     .setDescription(`<:arzeus_cross:804612025379586058> You have already robbed someone\n\nTry again in ${time.minutes}m ${time.seconds}s `);
     message.channel.send(timeEmbed)
   } else {
 
 let moneyEmbed = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> You need atleast 200 coins in your wallet to rob someone`);
 
 if (author2 < 200) {
@@ -30,7 +30,7 @@ if (author2 < 200) {
 
 }
 let moneyEmbed2 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> ${user.user.username} does not have anything you can rob`);
 if (targetuser < 0) {
     return message.channel.send(moneyEmbed2)

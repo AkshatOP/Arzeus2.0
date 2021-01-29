@@ -8,9 +8,9 @@ module.exports.run = async (bot, message, args) => {
     let embed = new Discord.MessageEmbed()
     .setTitle("Money Man Help Centre [Prefix e!]")
     .addField("Economy Commands", "`work` `beg` `rob` `pay` `balance` `profile` `withdraw` `deposit` `daily` `weekly` `store` `buy` `sell`")
-    .addField("Gambling Commmands", "`roulette` `slots`")
+    .addField("Gambling Commmands", "`slots`")
     .addField("Economy Extra Commands", "`storeinfo [item]`")
-    .setColor("#FFFFFF")
+    .setColor("GOLD")
     message.channel.send(embed)
 
 

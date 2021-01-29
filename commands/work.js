@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         let time = ms(timeout - (Date.now() - author));
     
         let timeEmbed = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
+        .setColor("GOLD")
         .setDescription(`<:Cross:618736602901905418> You have already worked recently\n\nTry again in ${time.minutes}m ${time.seconds}s `);
         message.channel.send(timeEmbed)
       } else {
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
         let result = Math.floor((Math.random() * replies.length));
         let amount = Math.floor(Math.random() * 80) + 1;
         let embed1 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
+        .setColor("GOLD")
         .setDescription(`<:Check:618736570337591296> You worked as a ${replies[result]} and earned ${amount} coins`);
         message.channel.send(embed1)
         

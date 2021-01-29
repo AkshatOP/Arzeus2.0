@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     let bal = await db.fetch(`money_${message.guild.id}_${user.id}`)
 
     let moneyEmbed = new Discord.MessageEmbed()
-    .setColor("#FFFFFF")
+    .setColor("GOLD")
     .setDescription(`<:arzeus_tick:804612374518169620> Removed ${args[1]} <:arzeus_coin:804370629654347788>\n\nNew Balance: ${bal} <:arzeus_coin:804370629654347788>`);
     message.channel.send(moneyEmbed)
 
