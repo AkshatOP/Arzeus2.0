@@ -20,15 +20,15 @@ let random = Math.floor(Math.random() * 37);
 
 let moneyhelp = new Discord.MessageEmbed()
 .setColor("#FFFFFF")
-.setDescription(`<:Cross:618736602901905418> Specify an amount to gamble | m!roulette <color> <amount>`);
+.setDescription(`<:arzeus_cross:804612025379586058> Specify an amount to gamble | e!roulette <color> <amount>`);
 
 let moneymore = new Discord.MessageEmbed()
 .setColor("#FFFFFF")
-.setDescription(`<:Cross:618736602901905418> You are betting more than you have`);
+.setDescription(`<:arzeus_cross:804612025379586058>You are betting more than you have`);
 
 let colorbad = new Discord.MessageEmbed()
 .setColor("#FFFFFF")
-.setDescription(`<:Cross:618736602901905418> Specify a color | Red [1.5x] Black [2x] Green [15x]`);
+.setDescription(`<:arzeus_cross:804612025379586058> Specify a color | Red [1.5x] Black [2x] Green [15x]`);
 
 
     if (!colour)  return message.channel.send(colorbad);
@@ -48,7 +48,7 @@ let colorbad = new Discord.MessageEmbed()
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed1 = new Discord.MessageEmbed()
         .setColor("#FFFFFF")
-        .setDescription(`<:Green:618767721361833995> You won ${money} coins\n\nMultiplier: 15x`);
+        .setDescription(`<:Green:618767721361833995> You won ${money} <:arzeus_coin:804370629654347788>\n\nMultiplier: 15x`);
         message.channel.send(moneyEmbed1)
         console.log(`${message.author.tag} Won ${money} on green`)
     } else if (isOdd(random) && colour == 1) { // Red
@@ -56,20 +56,20 @@ let colorbad = new Discord.MessageEmbed()
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed2 = new Discord.MessageEmbed()
         .setColor("#FFFFFF")
-        .setDescription(`<:Red:618767705444450342> You won ${money} coins\n\nMultiplier: 1.5x`);
+        .setDescription(`<:Red:618767705444450342> You won ${money} <:arzeus_coin:804370629654347788>\n\nMultiplier: 1.5x`);
         message.channel.send(moneyEmbed2)
     } else if (!isOdd(random) && colour == 0) { // Black
         money = parseInt(money * 2)
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed3 = new Discord.MessageEmbed()
         .setColor("#FFFFFF")
-        .setDescription(`<:Black:618767682996666408> You won ${money} coins\n\nMultiplier: 2x`);
+        .setDescription(`<:Black:618767682996666408> You won ${money} <:arzeus_coin:804370629654347788>\n\nMultiplier: 2x`);
         message.channel.send(moneyEmbed3)
     } else { // Wrong
         db.subtract(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed4 = new Discord.MessageEmbed()
         .setColor("#FFFFFF")
-        .setDescription(`<:Cross:618736602901905418> You lost ${money} coins\n\nMultiplier: 0x`);
+        .setDescription(`<:arzeus_cross:804612025379586058> You lost ${money} <:arzeus_coin:804370629654347788>\n\nMultiplier: 0x`);
         message.channel.send(moneyEmbed4)
     }
 }

@@ -9,14 +9,16 @@ exports.run = async (bot, message, args) => {
   return message.reply(`You can't use the command`);
  }
 
- let user = message.mentions.roles.first();
- if (isNaN(args[1])) return;
+ //let user = message.mentions.roles.first();
+ let user = message.mentions.members.first() || message.author;
+
+  if (isNaN(args[1])) return;
  db.add(`money_${message.guild.id}_${user.id}`, args[1]);
 
  let moneyEmbed = new Discord.MessageEmbed()
   .setColor('GOLD')
   .setDescription(
-   `✅ | ${user.id} has been given ${args[1]} <:arzeus_coin:804370629654347788>.`
+   `<:arzeus_tick:804612374518169620> | ${user} has been given ${args[1]} <:arzeus_coin:804370629654347788>.`
   );
  message.channel.send(moneyEmbed);
 };

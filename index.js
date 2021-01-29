@@ -28,7 +28,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 })
 bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers! made by Yashraj Gaming`);
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers! made by AK`);
   bot.user.setActivity(`Simple Economy bot`);
   bot.user.setStatus('idle');
 

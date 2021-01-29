@@ -43,7 +43,7 @@ if(vip === true)  random = Math.floor(Math.random() * 200) + 1;
 if (vip === null) random = Math.floor(Math.random() * 100) + 1;
 
 let embed = new Discord.MessageEmbed()
-.setDescription(`<:Check:618736570337591296> You robbed ${user} and got away with ${random} coins`)
+.setDescription(`<:Check:618736570337591296> You robbed ${user} and got away with ${random} <:arzeus_coin:804370629654347788>`)
 .setColor("#FFFFFF")
 message.channel.send(embed)
 
