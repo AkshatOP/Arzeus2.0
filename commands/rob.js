@@ -10,7 +10,7 @@ let targetuser = await db.fetch(`money_${message.guild.id}_${user.id}`)
 let author = await db.fetch(`rob_${message.guild.id}_${user.id}`)
 let author2 = await db.fetch(`money_${message.guild.id}_${user.id}`)
 
-let timeout = 600000;
+let timeout = 20000;
 
 if (author !== null && timeout - (Date.now() - author) > 0) {
     let time = ms(timeout - (Date.now() - author));
@@ -50,7 +50,7 @@ message.channel.send(embed)
 db.subtract(`money_${message.guild.id}_${user.id}`, random)
 db.add(`money_${message.guild.id}_${user.id}`, random)
 db.set(`rob_${message.guild.id}_${user.id}`, Date.now())
-  
+    
 };
 }
 
