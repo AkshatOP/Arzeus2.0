@@ -17,12 +17,12 @@ module.exports.run = async (bot, message, args) => {
   
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("#FFFFFF")
-    .setDescription(`<:Cross:618736602901905418> You've already begged recently\n\nBeg again in ${time.minutes}m ${time.seconds}s `);
+    .setDescription(`<:arzeus_cross:804612025379586058> You've already begged recently\n\nBeg again in ${time.minutes}m ${time.seconds}s `);
     message.channel.send(timeEmbed)
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:Check:618736570337591296> You've begged and received ${amount} coins`);
+  .setDescription(`<:arzeus_tick:804612374518169620> You've begged and received ${amount} <:arzeus_coin:804370629654347788>`);
   message.channel.send(moneyEmbed)
   db.add(`money_${message.guild.id}_${user.id}`, amount)
   db.set(`beg_${message.guild.id}_${user.id}`, Date.now())

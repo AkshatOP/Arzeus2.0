@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args, utils) => {
 
   let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`**${user}'s Balance**\n\nPocket: ${bal}\nBank: ${bank}`);
+  .setDescription(`**${user}'s Balance**\n\nWallet: ${bal} <:arzeus_coin:804370629654347788>\nBank: ${bank} <:arzeus_coin:804370629654347788>`);
   message.channel.send(moneyEmbed)
 };
 
