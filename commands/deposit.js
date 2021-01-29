@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`)
 
     let embedbank = new Discord.MessageEmbed()
-    .setColor('#FFFFFF')
+    .setColor('GOLD')
     .setDescription("<:arzeus_cross:804612025379586058> You don't have any money to deposit")
 
     if(money === 0) return message.channel.send(embedbank)
