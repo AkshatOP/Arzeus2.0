@@ -39,12 +39,12 @@ if (targetuser < 0) {
 
 
 let vip = await db.fetch(`bronze_${user.id}`)
-if(vip === true)  random = Math.floor(Math.random() * 200) + 1;
+//if(vip === true)  random = Math.floor(Math.random() * 200) + 1;
 if (vip === null) random = Math.floor(Math.random() * 100) + 1;
 
 let embed = new Discord.MessageEmbed()
-.setDescription(`<:Check:618736570337591296> You robbed ${user} and got away with ${random} <:arzeus_coin:804370629654347788>`)
-.setColor("#FFFFFF")
+.setDescription(`<:arzeus_tick:804612374518169620>| You robbed ${user} and got away with ${random} <:arzeus_coin:804370629654347788>`)
+.setColor("GOLD")
 message.channel.send(embed)
 
 db.subtract(`money_${message.guild.id}_${user.id}`, random)
