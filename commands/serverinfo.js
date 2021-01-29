@@ -23,7 +23,7 @@ const db = require('quick.db');
             let embed = new MessageEmbed()
 				embed.setAuthor(message.guild.name, message.guild.iconURL())
         embed.setColor("GOLD")
-        embed.setDescription(`**Server Owner** - <@785725873851990017> & <@705408504156127273> \n
+        embed.setDescription(`**Server Owners** - <@785725873851990017> & <@705408504156127273> \n
                 **Server CO-Owner** - <@721675303486750730> \n
                 **CREATED AT** - ${message.guild.createdAt} \n
                 **Rules Channel** - <#801723660984516648> \n

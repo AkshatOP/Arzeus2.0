@@ -9,20 +9,20 @@ module.exports.run = async (bot, message, args) => {
     let author = db.fetch(`money_${message.guild.id}_${user.id}`)
 
     let Embed = new Discord.MessageEmbed()
-    .setColor("#FFFFFF")
-    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 coins to purchase Bronze VIP`);
+    .setColor("GOLD")
+    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 <:arzeus_coin:804370629654347788> to purchase Giratina role`);
 
     if (args[0] == 'giratina') {
         if (author < 30000) return message.channel.send(Embed)
         
-        db.fetch(`bronze_${message.guild.id}_${user.id}`);
-        db.set(`bronze_${message.guild.id}_${user.id}`, true)
+        db.fetch(`giratina_${message.guild.id}_${user.id}`);
+        db.set(`giratina_${message.guild.id}_${user.id}`, true)
 
         let Embed2 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased Bronze VIP For 3500 <:arzeus_coin:804370629654347788>`);
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased giratina For 30K <:arzeus_coin:804370629654347788>`);
 
-        db.subtract(`money_${message.guild.id}_${user.id}`, 3500)
+        db.subtract(`money_${message.guild.id}_${user.id}`, 30000)
         message.channel.send(Embed2)
     } else if(args[0] == 'nikes') {
         let Embed2 = new Discord.MessageEmbed()

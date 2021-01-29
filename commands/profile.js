@@ -12,9 +12,9 @@ module.exports.run = async (bot, message, args) => {
   let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`)
   if (bank === null) bank = 0;
 
-  let vip = await db.fetch(`bronze_${message.guild.id}_${user.id}`)
+  let vip = await db.fetch(`giratina_${message.guild.id}_${user.id}`)
     if(vip === null) vip = 'None'
-    if(vip === true) vip = 'Bronze'
+    if(vip === true) vip = 'giratina'
 
   let shoes = await db.fetch(`nikes_${message.guild.id}_${user.id}`)
   if(shoes === null) shoes = '0'
