@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
   } else {
   
   let embed2 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> Specify an amount to deposit`);
   
   if (!args[0]) {
@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
       .catch(err => console.log(err))
   }
   let embed3 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> You can't deposit negative money`);
 
   if (message.content.includes('-')) { 
