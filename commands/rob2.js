@@ -15,7 +15,7 @@ exports.run = async (bot, message, args) => {
     if (!user) {
         return message.channel.send('Sorry, you forgot to mention somebody.')
     } 
-    if (user == `${message.author}`) {
+      if(user == `${message.author}`) {
         return message.channel.send(`u can't rob urself dumb`)
     } else {
     
