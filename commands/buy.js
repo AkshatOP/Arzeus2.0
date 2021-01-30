@@ -10,37 +10,66 @@ module.exports.run = async (bot, message, args) => {
 
     let Embed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 <:arzeus_coin:804370629654347788> to purchase Giratina role`);
+    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 <:arzeus_coin:804370629654347788> to purchase <@&804991402525327420> role`);
 
     if (args[0] == 'giratina') {
         if (author < 30000) return message.channel.send(Embed)
         
         db.fetch(`giratina_${message.guild.id}_${user.id}`);
         db.set(`giratina_${message.guild.id}_${user.id}`, true)
+      
+       message.member.roles.add("804991402525327420").catch((e) => console.log(e));
+  //  message.channel.send(
+    //  `The role <@&804991402525327420> has been added to ${user}.`
+   // );
+      
+      
+
+
 
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased giratina For 30K <:arzeus_coin:804370629654347788>`);
+        .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased giratina role For 30K <:arzeus_coin:804370629654347788>\n The role <@&804991402525327420> has been added to ${user}.`);
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 30000)
         message.channel.send(Embed2)
-    } else if(args[0] == 'nikes') {
+      
+      
+       let embed90 = new Discord.MessageEmbed()
+    .setColor('GOLD')
+    .setTitle(`**__ITEM BOUGHT__**`)
+    .setDescription(`${user} has bought the <@&804991402525327420> role`)
+    .setThumbnail(user.avatarURL())
+    .addField(`Bought Date - ${message.createdAt}`)
+    .setTimestamp()
+   
+
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  sChannel.send(embed90); 
+      
+      
+    } else if(args[0] == 'palkia') {
         let Embed2 = new Discord.MessageEmbed()
 
-        .setColor("#FFFFFF")
-        .setDescription(`<:arzeus_cross:804612025379586058> You need 600 <:arzeus_coin:804370629654347788> to purchase some Nikes`);
+        .setColor('GOLD')
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 40K <:arzeus_coin:804370629654347788> to purchase <@&805087249167155220> role`);
 
-        if (author < 600) return message.channel.send(Embed2)
+        if (author < 40000) return message.channel.send(Embed2)
        
-        db.fetch(`nikes_${message.guild.id}_${user.id}`)
-        db.add(`nikes_${message.guild.id}_${user.id}`, 1)
+        db.fetch(`palkia_${message.guild.id}_${user.id}`)
+      //  db.add(`palkia_${message.guild.id}_${user.id}`, 1)
+        db.set(`palkia_${message.guild.id}_${user.id}`, true)
 
         let Embed3 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased Fresh Nikes For 600 <:arzeus_coin:804370629654347788>`);
-
-        db.subtract(`money_${message.guild.id}_${user.id}`, 600)
+        .setColor("GOLD")
+        
+        .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased palkia role For 40K <:arzeus_coin:804370629654347788>\n The role <@&805087249167155220> has been added to ${user}.`);  
+      
+        db.subtract(`money_${message.guild.id}_${user.id}`, 4)
         message.channel.send(Embed3)
+      
+      
+      
     } else if(args[0] == 'car') {
         let Embed2 = new Discord.MessageEmbed()
         .setColor("#FFFFFF")

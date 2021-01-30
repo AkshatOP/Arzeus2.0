@@ -10,43 +10,20 @@ module.exports.run = async (bot, message, args) => {
 
     let Embed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 <:arzeus_coin:804370629654347788> to purchase <@&804991402525327420> role`);
+    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 <:arzeus_coin:804370629654347788> to purchase Giratina role`);
 
     if (args[0] == 'giratina') {
         if (author < 30000) return message.channel.send(Embed)
         
         db.fetch(`giratina_${message.guild.id}_${user.id}`);
         db.set(`giratina_${message.guild.id}_${user.id}`, true)
-      
-       message.member.roles.add("804991402525327420").catch((e) => console.log(e));
-  //  message.channel.send(
-    //  `The role <@&804991402525327420> has been added to ${user}.`
-   // );
-      
-      
-
-
 
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased giratina For 30K <:arzeus_coin:804370629654347788>\n The role <@&804991402525327420> has been added to ${user}.`);
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased giratina For 30K <:arzeus_coin:804370629654347788>`);
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 30000)
         message.channel.send(Embed2)
-      
-      
-       let embed90 = new Discord.MessageEmbed()
-    .setColor('GOLD')
-    .setTitle(`**__ITEM BOUGHT__**`)
-    .setDescription(`${user} has bought the <@&804991402525327420> role`)
-    .setThumbnail(user.avatarURL())
-    .addField(`Bought Date - ${message.createdAt}`)
-    .setTimestamp()
-   
-
-  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
-  sChannel.send(embed90); 
-      
     } else if(args[0] == 'nikes') {
         let Embed2 = new Discord.MessageEmbed()
 
@@ -106,6 +83,6 @@ module.exports.run = async (bot, message, args) => {
 }
   
   module.exports.help = {
-    name:"buy2",
+    name:"buy",
     aliases: [""]
   }
