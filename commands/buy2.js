@@ -18,10 +18,24 @@ module.exports.run = async (bot, message, args) => {
         db.fetch(`giratina_${message.guild.id}_${user.id}`);
         db.set(`giratina_${message.guild.id}_${user.id}`, true)
       
-       message.member.roles.add(804991402525327420).catch((e) => console.log(e));
+       message.member.roles.add("804991402525327420").catch((e) => console.log(e));
     message.channel.send(
       `The role <@&804991402525327420> has been added to ${user}.`
     );
+      
+      let embed90 = new Discord.MessageEmbed()
+    .setColor(colours.redlight)
+    .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL())
+    .addField("Moderation:", "Addrole")
+    .addField("Mute:", user.user.username)
+    .addField("Reason:", reason)
+    .addField("Date:", message.createdAt); // `.toLocaleString()` isn't required, discord automatically coonverts it to string.
+
+  let sChannel = message.guild.channels.cache.find(
+    (c) => c.name === "logs"
+  )
+  sChannel.send(embed90);
+}
 
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
