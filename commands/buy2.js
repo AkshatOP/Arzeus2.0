@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
         db.fetch(`giratina_${message.guild.id}_${user.id}`);
         db.set(`giratina_${message.guild.id}_${user.id}`, true)
       
-       user.roles.add(804991402525327420).catch((e) => console.log(e));
+       message.member.roles.add(804991402525327420).catch((e) => console.log(e));
     message.channel.send(
       `The role <@&804991402525327420> has been added to ${user}.`
     );
