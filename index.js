@@ -84,7 +84,7 @@ bot.on("message", message => {
 
 bot.on("message", message => {
   const victim = message.mentions.members.first()
-if (message.content.startWith == "c!kill") {
+if (message.content.startsWith("c!kill")) {
     
     
     if (!victim){ 
@@ -94,8 +94,7 @@ return message.reply("Mention someone to kill, murderer")
       message.channel.send (`${victim} was killed by the incredible stench of an old Lunch Carrot, lmfao (oh that was me...)`)
     }
 }
-  
-          });
+})
 
 
 bot.login(process.env.token);
