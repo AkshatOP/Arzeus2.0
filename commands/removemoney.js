@@ -3,9 +3,14 @@ const db = require("quick.db");
 
 module.exports.run = async (bot, message, args) => {
   //if(!message.content.startsWith('e!'))return;  
-  let ownerID = ['785725873851990017' , '721675303486750730']
-  if(message.author.id !== ownerID) return;
+  //let ownerID = ['785725873851990017' , '721675303486750730']
+  //if(message.author.id !== ownerID) return;
 
+   if (!message.member.permissions.has('ADMINISTRATOR')) {
+  return message.reply(`You can't use the command`);
+ }
+
+  
   let user = message.mentions.members.first() || message.author;
 
     if (isNaN(args[1])) return;
