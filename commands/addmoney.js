@@ -8,9 +8,9 @@ exports.run = async (bot, message, args) => {
   
  if (!args[0]) return message.reply('Enter a valid amount');
 
- if (!message.member.permissions.has('ADMINISTRATOR')) {
-  return message.reply(`You can't use the command`);
- }
+// if (!message.member.permissions.has('ADMINISTRATOR')) {
+ // return message.reply(`You can't use the command`);
+ //}
 
  //let user = message.mentions.roles.first();
  let user = message.mentions.members.first() || message.author;

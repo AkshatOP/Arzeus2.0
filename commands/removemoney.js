@@ -21,6 +21,6 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.help = {
-  name:"remove",
-  aliases: ["rm"]
+  name:"removemoney",
+  aliases: ["rm","remove"]
 }
