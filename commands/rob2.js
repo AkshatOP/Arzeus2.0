@@ -11,6 +11,14 @@ exports.run = async (bot, message, args) => {
     let author = await db.fetch(`money_${message.guild.id}_${message.author.id}`) // fetch authors balance
     let author2 = await db.fetch(`rob_${message.guild.id}_${message.author.id}`)//fetch last robbed
 
+    
+    if (!user) {
+        return message.channel.send('Sorry, you forgot to mention somebody.')
+    } 
+    if (user == `${message.author}`) {
+        return message.channel.send(`u can't rob urself dumb`)
+    } else {
+    
     let timeout = 20000;
 
 if (author2 !== null && timeout - (Date.now() - author2) > 0) {
@@ -22,12 +30,7 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
     message.channel.send(timeEmbed)
   } else {
     
-    if (!user) {
-        return message.channel.send('Sorry, you forgot to mention somebody.')
-    } else {
-    if (user == `${message.author}`) {
-        return message.channel.send(`u can't rob urself dumb`)
-    }
+    
     if (author < 250) { // if the authors balance is less than 250, return this.
         return message.channel.send('<:arzeus_cross:804612025379586058> You need atleast 250 <:arzeus_coin:804370629654347788> to rob somebody.')
     }
@@ -35,6 +38,8 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
     if (targetuser < 0) { // if mentioned user has 0 or less, it will return this.
         return message.channel.send(`<:arzeus_cross:804612025379586058> ${user.user.username} does not have anything to rob.`)
     }
+    
+  
 
 
     let random = Math.floor(Math.random() * 200) + 1; // random number 200-1, you can change 200 to whatever you'd like
@@ -51,7 +56,9 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
     db.add(`money_${message.guild.id}_${message.author.id}`, random)
     db.set(`rob_${message.guild.id}_${message.author.id}`, Date.now())
 }
+    }
 }
+    
 
 module.exports.help = {
   name:"rob2",
