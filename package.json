@@ -12,9 +12,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "discord.js": "^12.4.0",
-    "quick.db": "^7.1.2",
     "fs": "^0.0.2",
-    "parse-ms": "^2.1.0"
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.1.2"
   },
   "engines": {
     "node": "12.x"
