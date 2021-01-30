@@ -13,8 +13,8 @@ exports.run = async (bot, message, args) => {
 
     let timeout = 20000;
 
-if (author2 !== null && timeout - (Date.now() - author) > 0) {
-    let time = ms(timeout - (Date.now() - author));
+if (author2 !== null && timeout - (Date.now() - author2) > 0) {
+    let time = ms(timeout - (Date.now() - author2));
 
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("GOLD")
@@ -24,13 +24,16 @@ if (author2 !== null && timeout - (Date.now() - author) > 0) {
     
     if (!user) {
         return message.channel.send('Sorry, you forgot to mention somebody.')
+    } else {
+    if (user == `${message.author}`) {
+        return message.channel.send(`u can't rob urself dumb`)
     }
     if (author < 250) { // if the authors balance is less than 250, return this.
-        return message.channel.send(':x: You need atleast 250$ to rob somebody.')
+        return message.channel.send('<:arzeus_cross:804612025379586058> You need atleast 250 <:arzeus_coin:804370629654347788> to rob somebody.')
     }
 
     if (targetuser < 0) { // if mentioned user has 0 or less, it will return this.
-        return message.channel.send(`:x: ${user.user.username} does not have anything to rob.`)
+        return message.channel.send(`<:arzeus_cross:804612025379586058> ${user.user.username} does not have anything to rob.`)
     }
 
 
@@ -38,7 +41,7 @@ if (author2 !== null && timeout - (Date.now() - author) > 0) {
 
 
     let embed = new Discord.MessageEmbed()
-    .setDescription(`${message.author} you robbed ${user} and got away with ${random}!`)
+    .setDescription(`<:arzeus_tick:804612374518169620> | ${message.author} you robbed ${user} and got away with ${random} <:arzeus_coin:804370629654347788>!`)
     .setColor("GOLD")
     .setTimestamp()
     message.channel.send(embed)
