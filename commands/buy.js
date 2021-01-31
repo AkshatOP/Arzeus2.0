@@ -94,6 +94,8 @@ module.exports.run = async (bot, message, args) => {
        
         db.fetch(`dialga_${message.guild.id}_${user.id}`)
         db.set(`dialga_${message.guild.id}_${user.id}`, true)
+      
+       message.member.roles.add("805087273040609292").catch((e) => console.log(e));
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")
@@ -117,7 +119,7 @@ module.exports.run = async (bot, message, args) => {
       
       
       
-    } else if(args[0] == 'snipe pass') {
+    } else if(args[0] == 'snipe_pass') {
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
         .setDescription(`<:arzeus_cross:804612025379586058> You need 90000 <:arzeus_coin:804370629654347788> to purchase a Snipe pass for a week`);
@@ -126,13 +128,15 @@ module.exports.run = async (bot, message, args) => {
        
         db.fetch(`snipepass_${message.guild.id}_${user.id}`)
         db.set(`snipepass_${message.guild.id}_${user.id}`, true)
+      
+      message.member.roles.add("805265307785887775").catch((e) => console.log(e));
 
-        let Embed3 = new Discord.MessageEmbed()
+        let Embed4 = new Discord.MessageEmbed()
         .setColor("GOLD")
          .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased Snipe pass(1 week) For 90K <:arzeus_coin:804370629654347788>\n The role <@&805265307785887775> has been added to ${user}.`);  
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 90000)
-        message.channel.send(Embed3)
+        message.channel.send(Embed4)
       
       
        let embed94 = new Discord.MessageEmbed()
