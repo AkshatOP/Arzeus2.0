@@ -117,26 +117,41 @@ module.exports.run = async (bot, message, args) => {
       
       
       
-    } else if(args[0] == 'mansion') {
+    } else if(args[0] == 'snipe pass') {
         let Embed2 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription(`<:arzeus_cross:804612025379586058> You need 1200 <:arzeus_coin:804370629654347788> to purchase a Mansion`);
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 90000 <:arzeus_coin:804370629654347788> to purchase a Snipe pass for a week`);
 
-        if (author < 1200) return message.channel.send(Embed2)
+        if (author < 90000) return message.channel.send(Embed2)
        
-        db.fetch(`house_${message.guild.id}_${user.id}`)
-        db.add(`house_${message.guild.id}_${user.id}`, 1)
+        db.fetch(`snipepass_${message.guild.id}_${user.id}`)
+        db.set(`snipepass_${message.guild.id}_${user.id}`, true)
 
         let Embed3 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a Mansion For 1200 <:arzeus_coin:804370629654347788>`);
+        .setColor("GOLD")
+         .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased Snipe pass(1 week) For 90K <:arzeus_coin:804370629654347788>\n The role <@&805265307785887775> has been added to ${user}.`);  
 
-        db.subtract(`money_${message.guild.id}_${user.id}`, 1200)
+        db.subtract(`money_${message.guild.id}_${user.id}`, 90000)
         message.channel.send(Embed3)
+      
+      
+       let embed94 = new Discord.MessageEmbed()
+    .setColor('GOLD')
+    .setTitle(`**__ITEM BOUGHT__**`)
+    .setDescription(`${user} has bought the <@&805265307785887775> role`)
+    .setThumbnail(user.avatarURL())
+    .addField(`Bought Date - ${message.createdAt}`)
+    .setTimestamp()
+   
+
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  sChannel.send(embed94);
+      
+      
     } else {
         let embed3 = new Discord.MessageEmbed()
-        .setColor("#FFFFFF")
-        .setDescription('<:arzeus_cross:804612025379586058>Enter an item to buy')
+        .setColor("GOLD")
+        .setDescription('<:arzeus_cross:804612025379586058>| Enter an item to buy')
         message.channel.send(embed3)
     }
 
