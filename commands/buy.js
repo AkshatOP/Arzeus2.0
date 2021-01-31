@@ -188,7 +188,7 @@ module.exports.run = async (bot, message, args) => {
               } else if(args[0] == 'spam_pass') {
          let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_cross:804612025379586058>| You need 150000 <:arzeus_coin:804370629654347788> to purchase owner respect role`);
+        .setDescription(`<:arzeus_cross:804612025379586058>| You need 250000 <:arzeus_coin:804370629654347788> to purchase owner respect role`);
 
         if (author < 250000) return message.channel.send(Embed2)
        
@@ -199,9 +199,9 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed6 = new Discord.MessageEmbed()
         .setColor("GOLD")
-         .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased Snipe pass(1 week) For 80K <:arzeus_coin:804370629654347788>\n The role <@&805305458628886528> has been added to ${user}.`);  
+         .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased Owner Respect Role For 250K <:arzeus_coin:804370629654347788>\n The role <@&805305458628886528> has been added to ${user}.`);  
 
-        db.subtract(`money_${message.guild.id}_${user.id}`, 150000)
+        db.subtract(`money_${message.guild.id}_${user.id}`, 250000)
         message.channel.send(Embed6)
       
       

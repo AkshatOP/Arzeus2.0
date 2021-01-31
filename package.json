@@ -14,7 +14,8 @@
     "discord.js": "^12.4.0",
     "fs": "^0.0.2",
     "parse-ms": "^2.1.0",
-    "quick.db": "^7.1.2"
+    "quick.db": "^7.1.2",
+    "twemoji-parser": "^13.0.0"
   },
   "engines": {
     "node": "12.x"

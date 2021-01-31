@@ -3,12 +3,9 @@ const db = require("quick.db");
 
 module.exports.run = async (bot, message, args) => {
   //if(!message.content.startsWith('e!'))return;  
-  //let ownerID = ['785725873851990017' , '721675303486750730']
-  //if(message.author.id !== ownerID) return;
+   let ownerID = ['785725873851990017' , '721675303486750730']
+ if(ownerID.includes(message.author.id)){ 
 
-   if (!message.member.permissions.has('ADMINISTRATOR')) {
-  return message.reply(`You can't use the command`);
- }
 
   
   let user = message.mentions.members.first() || message.author;
@@ -21,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("GOLD")
     .setDescription(`<:arzeus_tick:804612374518169620>| Removed ${args[1]} <:arzeus_coin:804370629654347788>\n\nNew Balance: ${bal} <:arzeus_coin:804370629654347788>`);
     message.channel.send(moneyEmbed)
-
+ }
 };
 
 

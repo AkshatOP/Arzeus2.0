@@ -4,6 +4,7 @@ dependencies:
   fs: 0.0.2
   parse-ms: 2.1.0
   quick.db: 7.1.3
+  twemoji-parser: 13.0.0
 packages:
   /@discordjs/collection/0.1.6:
     dev: false
@@ -919,6 +920,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
+  /twemoji-parser/13.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-zMaGdskpH8yKjT2RSE/HwE340R4Fm+fbie4AaqjDa4H/l07YUmAvxkSfNl6awVWNRRQ0zdzLQ8SAJZuY5MgstQ==
   /type-is/1.6.18:
     dependencies:
       media-typer: 0.3.0
@@ -986,3 +991,4 @@ specifiers:
   fs: ^0.0.2
   parse-ms: ^2.1.0
   quick.db: ^7.1.2
+  twemoji-parser: ^13.0.0
