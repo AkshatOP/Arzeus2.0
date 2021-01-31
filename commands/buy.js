@@ -152,6 +152,71 @@ module.exports.run = async (bot, message, args) => {
   sChannel.send(embed94);
       
       
+       } else if(args[0] == 'spam_pass') {
+         let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058>| You need 80000 <:arzeus_coin:804370629654347788> to purchase a Spam pass for a week`);
+
+        if (author < 80000) return message.channel.send(Embed2)
+       
+        db.fetch(`spampass_${message.guild.id}_${user.id}`)
+        db.set(`spampass_${message.guild.id}_${user.id}`, true)
+      
+      message.member.roles.add("805303705590693939").catch((e) => console.log(e));
+
+        let Embed5 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+         .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased Snipe pass(1 week) For 80K <:arzeus_coin:804370629654347788>\n The role <@&805303705590693939> has been added to ${user}.`);  
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 80000)
+        message.channel.send(Embed5)
+      
+      
+       let embed95 = new Discord.MessageEmbed()
+    .setColor('GOLD')
+    .setTitle(`**__ITEM BOUGHT__**`)
+    .setDescription(`${user} has bought the <@&805303705590693939> role`)
+    .setThumbnail(user.avatarURL())
+    .addField(`Bought Date - ${message.createdAt}`)
+    .setTimestamp()
+   
+
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  sChannel.send(embed95);
+         
+         
+              } else if(args[0] == 'spam_pass') {
+         let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058>| You need 150000 <:arzeus_coin:804370629654347788> to purchase owner respect role`);
+
+        if (author < 250000) return message.channel.send(Embed2)
+       
+        db.fetch(`ownerresprectrole_${message.guild.id}_${user.id}`)
+        db.set(`ownerrespectrole_${message.guild.id}_${user.id}`, true)
+      
+      message.member.roles.add("805305458628886528").catch((e) => console.log(e));
+
+        let Embed6 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+         .setDescription(`<:arzeus_tick:804612374518169620>| ${user} Purchased Snipe pass(1 week) For 80K <:arzeus_coin:804370629654347788>\n The role <@&805305458628886528> has been added to ${user}.`);  
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 150000)
+        message.channel.send(Embed6)
+      
+      
+       let embed96 = new Discord.MessageEmbed()
+    .setColor('GOLD')
+    .setTitle(`**__ITEM BOUGHT__**`)
+    .setDescription(`${user} has bought the <@&805305458628886528> role`)
+    .setThumbnail(user.avatarURL())
+    .addField(`Bought Date - ${message.createdAt}`)
+    .setTimestamp()
+   
+
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  sChannel.send(embed96);
+      
     } else {
         let embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")
