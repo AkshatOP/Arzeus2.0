@@ -5,11 +5,11 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args) => {
  // if(!message.content.startsWith('e!'))return;  
 
-  if(message.member.roles.cache.has("
+  if(message.member.roles.cache.has("805808828897558528")){
    
   let user = message.author;
   let timeout = 604800000;
-  let amount = 1000;
+  let amount = 6000;
 
   let weekly = await db.fetch(`weekly_${message.guild.id}_${user.id}`);
 
@@ -30,7 +30,10 @@ module.exports.run = async (bot, message, args) => {
 
 
   }
-};
+} else {
+  message.channel.send("boost us to use  command") 
+  }
+  };
 
 
 module.exports.help = {

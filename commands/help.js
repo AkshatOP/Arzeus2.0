@@ -7,9 +7,9 @@ module.exports.run = async (bot, message, args) => {
 
     let embed = new Discord.MessageEmbed()
     .setTitle("**__LIST OF MY COMMANDS__**")
-    .addField("> <:pikasip:803606908103032852> **1. General Commands**","`Ping`,`info <user>`,`vote`,`order`,`afk`,`avatar`,`embed`")
-    //.addField("")
-    .addField("> <a:moneyaabag:802503275085299752> **2. Economy Commands**", "`work`,`beg`,`rob`,`pay`,`balance`,`profile`,`withdraw`,`deposit`,`daily`,`weekly`,`store`,`buy` ")
+    .addField("> <:pikasip:803606908103032852> **1. General Commands**","`Ping`,`info <user>`,`vote`,`order`,`apply`,`afk`,`back`,`avatar <user>`,`embed`")
+    .addField("> Server Related Commands", "`staff`, `rules for staff`,`order`")
+    .addField("> <a:moneyaabag:802503275085299752> **2. Economy Commands**", "`work`,`beg`,`rob`,`pay`,`balance`,`profile`,`withdraw`,`deposit`,`daily`\n`weekly`,`store`,`buy` ")
     .addField("> <a:paisa:805769554470633482> **3. Gambling Commmands**", "`slots`")
     //.addField("> Economy Extra Commands", "`store`")
     .setColor("GOLD")
