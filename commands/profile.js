@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
   if(palkia === null) palkia = '<:arzeus_cross:804612025379586058>'
   
   let dialga = await db.fetch(`dialga_${message.guild.id}_${user.id}`)
-  if(dialga === null) shoes = '<:arzeus_cross:804612025379586058>'
+  if(dialga === null) dialga = '<:arzeus_cross:804612025379586058>'
   
   let shoes = await db.fetch(`shoes_${message.guild.id}_${user.id}`)
   if(shoes === null) shoes = '0'

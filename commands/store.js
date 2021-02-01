@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("**__ITEMS IN SHOP__**")
     .setDescription("**VIP Roles**\n\nGIRATINA: 30K <:arzeus_coin:804370629654347788>\nPALKIA: 40K <:arzeus_coin:804370629654347788>\nDIALGA: 50K <:arzeus_coin:804370629654347788>\n\n**LIFESTYLES**\n\nSHOES: 1K <:arzeus_coin:804370629654347788>\nT-SHIRT: 3K <:arzeus_coin:804370629654347788>\nDESIGNER_SUIT: 6K <:arzeus_coin:804370629654347788>\nHOUSE: 40K <:arzeus_coin:804370629654347788>\nCAR: 20K <:arzeus_coin:804370629654347788>\n\n**PETS**\n\nHAMSTER: 2K <:arzeus_coin:804370629654347788>\nFISH: 4K <:arzeus_coin:804370629654347788>\nCAT: 6K <:arzeus_coin:804370629654347788>\nDOG: 10K <:arzeus_coin:804370629654347788>\n\n**SERVER SHOP**\n\nSNIPE PASS(1 WEEK): 90K  <:arzeus_coin:804370629654347788>\nSPAM PASS(1 WEEK) - 80K <:arzeus_coin:804370629654347788>\nOWNERS RESPECT ROLE(PERMANENT) - 250K <:arzeus_coin:804370629654347788>")
     .setColor("GOLD")
-    .setThumbnail(bot.user.iconURL())
+    //.setThumbnail()
     message.channel.send(embed)
 
 
