@@ -23,8 +23,8 @@ module.exports.run = async (bot, message, args) => {
     db.add(`bank_${message.guild.id}_${user.id}`, money)
     db.subtract(`money_${message.guild.id}_${user.id}`, money)
     let embed5 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`<:arzeus_tick:804612374518169620> You have deposited all your money into your bank`);
+  .setColor("GOLD")
+  .setDescription(`<a:tick:805814130304483358> You have deposited all your money into your bank`);
   message.channel.send(embed5)
   
   } else {
@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
       return message.channel.send(embed3)
   }
   let embed4 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> You don't have that much money`);
 
   if (member < args[0]) {
@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
 
   let embed5 = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`<:arzeus_tick:804612374518169620> You have deposited ${args[0]} <:arzeus_coin:804370629654347788> into your bank`);
+  .setDescription(`<a:tick:805814130304483358>| You have deposited ${args[0]} <:arzeus_coin:804370629654347788> into your bank`);
 
   message.channel.send(embed5)
   db.add(`bank_${message.guild.id}_${user.id}`, args[0])

@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 
     let moneyEmbed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:arzeus_tick:804612374518169620>| Removed ${args[1]} <:arzeus_coin:804370629654347788>\n\nNew Balance: ${bal} <:arzeus_coin:804370629654347788>`);
+    .setDescription(`<a:tick:805814130304483358>| Removed ${args[1]} <:arzeus_coin:804370629654347788>\n\nNew Balance: ${bal} <:arzeus_coin:804370629654347788>`);
     message.channel.send(moneyEmbed)
  }
 };

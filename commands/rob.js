@@ -32,11 +32,11 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
     
     
     if (author < 250) { // if the authors balance is less than 250, return this.
-        return message.channel.send('<:arzeus_cross:804612025379586058> You need atleast 250 <:arzeus_coin:804370629654347788> to rob somebody.')
+        return message.channel.send('<a:cross:805816169973809203>| You need atleast 250 <:arzeus_coin:804370629654347788> to rob somebody.')
     }
 
     if (targetuser < 0) { // if mentioned user has 0 or less, it will return this.
-        return message.channel.send(`<:arzeus_cross:804612025379586058> ${user.user.username} does not have anything to rob.`)
+        return message.channel.send(`<a:cross:805816169973809203>| ${user.user.username} does not have anything to rob.`)
     }
     
   
@@ -46,7 +46,7 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
 
 
     let embed = new Discord.MessageEmbed()
-    .setDescription(`<:arzeus_tick:804612374518169620> | ${message.author} you robbed ${user} and got away with ${random} <:arzeus_coin:804370629654347788>!`)
+    .setDescription(`<a:tick:805814130304483358>| ${message.author} you robbed ${user} and got away with ${random} <:arzeus_coin:804370629654347788>!`)
     .setColor("GOLD")
     .setTimestamp()
     message.channel.send(embed)

@@ -17,21 +17,21 @@ module.exports.run = async (bot, message, args) => {
       return message.channel.send(embed1)
   }
   let embed2 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> Specify an amount to pay`);
   
   if (!args[1]) {
       return message.channel.send(embed2)
   }
   let embed3 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> You can't pay someone negative money`);
 
   if (message.content.includes('-')) { 
       return message.channel.send(embed3)
   }
   let embed4 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
+  .setColor("GOLD")
   .setDescription(`<:arzeus_cross:804612025379586058> You don't have that much money`);
 
   if (member < args[1]) {
@@ -39,8 +39,8 @@ module.exports.run = async (bot, message, args) => {
   }
 
   let embed5 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`<:arzeus_tick:804612374518169620> You have payed ${user.user.username} ${args[1]} <:arzeus_coin:804370629654347788>`);
+  .setColor("GOLD")
+  .setDescription(`<a:tick:805814130304483358>| You have payed ${user.user.username} ${args[1]} <:arzeus_coin:804370629654347788>`);
 
   message.channel.send(embed5)
   db.add(`money_${message.guild.id}_${user.id}`, args[1])

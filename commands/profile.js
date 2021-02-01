@@ -12,9 +12,9 @@ module.exports.run = async (bot, message, args) => {
   let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`)
   if (bank === null) bank = 0;
 
-  let vip = await db.fetch(`giratina_${message.guild.id}_${user.id}`)
+ /* let vip = await db.fetch(`giratina_${message.guild.id}_${user.id}`)
     if(vip === null) vip = 'None'
-    if(vip === true) vip = '<@&804991402525327420>'
+    if(vip === true) vip = '<@&804991402525327420>'*/
 
   let giratina = await db.fetch(`giratina_${message.guild.id}_${user.id}`)
   if(giratina === null) giratina = '<:arzeus_cross:804612025379586058>'

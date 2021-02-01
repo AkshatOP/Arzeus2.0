@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`<:arzeus_tick:804612374518169620> You've collected your daily reward of ${amount} <:arzeus_coin:804370629654347788>`);
+  .setDescription(`<a:tick:805814130304483358>| You've collected your daily reward of ${amount} <:arzeus_coin:804370629654347788>`);
   message.channel.send(moneyEmbed)
   db.add(`money_${message.guild.id}_${user.id}`, amount)
   db.set(`daily_${message.guild.id}_${user.id}`, Date.now())

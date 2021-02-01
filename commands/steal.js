@@ -27,7 +27,7 @@ const Color = `GOLD`;
         .setTitle(`Emoji Added`)
         .setColor(`${Color}`)
         .setDescription(
-          `Emoji Has Been Added! | Name : ${name || `${customemoji.name}`} | Preview : [Click Me](${Link})`
+          `<a:tick:805814130304483358> Emoji Has Been Added! | Name : ${name || `${customemoji.name}`} | Preview : [Click Me](${Link})`
         );
       return message.channel.send(Added);
     } else {
