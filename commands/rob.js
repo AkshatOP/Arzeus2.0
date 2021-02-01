@@ -42,7 +42,7 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
   
 
 
-    let random = Math.floor(Math.random() * 200) + 1; // random number 200-1, you can change 200 to whatever you'd like
+    let random = Math.floor(Math.random() * 500) + 1; // random number 200-1, you can change 200 to whatever you'd like
 
 
     let embed = new Discord.MessageEmbed()

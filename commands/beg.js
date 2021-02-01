@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
   let user = message.author;
 
   let timeout = 180000;
-  let amount = 5;
+  let amount = Math.floor(Math.random() * 150) + 1;
 
   let beg = await db.fetch(`beg_${message.guild.id}_${user.id}`);
 
