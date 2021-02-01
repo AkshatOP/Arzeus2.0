@@ -1,6 +1,8 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
 
+let tick = `<:arzeus_tick:804612374518169620>`
+
 module.exports.run = async (bot, message, args) => {
   //   if(!message.content.startsWith('e!'))return;  
 
@@ -17,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
         if (author < 30000) return message.channel.send(Embed)
         
         db.fetch(`giratina_${message.guild.id}_${user.id}`);
-        db.set(`giratina_${message.guild.id}_${user.id}`, true)
+        db.set(`giratina_${message.guild.id}_${user.id}`, tick)
       
        message.member.roles.add("804991402525327420").catch((e) => console.log(e));
 
