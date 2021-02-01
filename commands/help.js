@@ -6,8 +6,9 @@ module.exports.run = async (bot, message, args) => {
 
 
     let embed = new Discord.MessageEmbed()
-    .setTitle("Money Man Help Centre [Prefix e!]")
-    .addField("Economy Commands", "`work` `beg` `rob` `pay` `balance` `profile` `withdraw` `deposit` `daily` `weekly` `store` `buy` `sell`")
+    .setTitle("**__LIST OF MY COMMANDS__**")
+    .addField("General Commands",`Ping`)
+    .addField("General Commands", "`work` `beg` `rob` `pay` `balance` `profile` `withdraw` `deposit` `daily` `weekly` `store` `buy` `sell`")
     .addField("Gambling Commmands", "`slots`")
     .addField("Economy Extra Commands", "`storeinfo [item]`")
     .setColor("GOLD")
