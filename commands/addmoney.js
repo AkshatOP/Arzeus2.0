@@ -19,7 +19,7 @@ exports.run = async (bot, message, args) => {
  let moneyEmbed = new Discord.MessageEmbed()
   .setColor('GOLD')
   .setDescription(
-   `<:arzeus_tick:804612374518169620> | ${user} has been given ${args[1]} <:arzeus_coin:804370629654347788>.`
+   `<a:tick:805814130304483358> | ${user} has been given ${args[1]} <:arzeus_coin:804370629654347788>.`
   );
  message.channel.send(moneyEmbed);
   }
