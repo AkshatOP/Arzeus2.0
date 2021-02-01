@@ -5,10 +5,12 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args) => {
  // if(!message.content.startsWith('e!'))return;  
 
+  if (message.member.roles.has("805785849961775164")) {
+  
   let user = message.author;
 
   let timeout = 86400000;
-  let amount = 200;
+  let amount = 4000;
 
   let daily = await db.fetch(`daily_${message.guild.id}_${user.id}`);
 
@@ -29,8 +31,13 @@ module.exports.run = async (bot, message, args) => {
 
 
   }
-};
-
+} else {
+  let notvote = new Discord.MessageEmbed()
+  .setColor("GOLD")
+  .setDescription("<:arzeus_cross:804612025379586058>| You can't use this command until you have voted the server. Vote us by typing `vt!vote`");
+  message.channel.send(notvote)
+}
+}
 
 module.exports.help = {
   name:"daily",

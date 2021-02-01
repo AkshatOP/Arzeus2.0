@@ -59,7 +59,7 @@ module.exports.run = async (bot, message, args) => {
         if (author < 40000) return message.channel.send(Embed2)
        
         db.fetch(`palkia_${message.guild.id}_${user.id}`)
-        db.set(`palkia_${message.guild.id}_${user.id}`, true)
+        db.set(`palkia_${message.guild.id}_${user.id}`, tick)
       
       message.member.roles.add("805087249167155220").catch((e) => console.log(e));
 
@@ -98,7 +98,7 @@ module.exports.run = async (bot, message, args) => {
         if (author < 50000) return message.channel.send(Embed2)
        
         db.fetch(`dialga_${message.guild.id}_${user.id}`)
-        db.set(`dialga_${message.guild.id}_${user.id}`, true)
+        db.set(`dialga_${message.guild.id}_${user.id}`, tick)
       
        message.member.roles.add("805087273040609292").catch((e) => console.log(e));
 
@@ -169,7 +169,7 @@ module.exports.run = async (bot, message, args) => {
             } else if(args[0] == 'designer_suit') {
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_cross:804612025379586058> You need 6000 <:arzeus_coin:804370629654347788> to purchase a new house`);
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 6000 <:arzeus_coin:804370629654347788> to purchase a new designer suit`);
 
         if (author < 6000) return message.channel.send(Embed2)
        
@@ -189,7 +189,7 @@ module.exports.run = async (bot, message, args) => {
                } else if(args[0] == 't-shirt') {
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_cross:804612025379586058> You need 3000 <:arzeus_coin:804370629654347788> to purchase a new house`);
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 3000 <:arzeus_coin:804370629654347788> to purchase a new t-shirt`);
 
         if (author < 6000) return message.channel.send(Embed2)
        
@@ -210,7 +210,7 @@ module.exports.run = async (bot, message, args) => {
                } else if(args[0] == 'shoes') {
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_cross:804612025379586058> You need 1000 <:arzeus_coin:804370629654347788> to purchase a new house`);
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 1000 <:arzeus_coin:804370629654347788> to purchase a pair of shoes`);
 
         if (author < 1000) return message.channel.send(Embed2)
        
