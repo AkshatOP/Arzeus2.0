@@ -5,7 +5,7 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args) => {
  // if(!message.content.startsWith('e!'))return;  
 
-  if (message.member.roles.has("805785849961775164")) {
+  if (message.member.roles.cache.has("805785849961775164")) {
   
   let user = message.author;
 
@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
   
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:arzeus_cross:804612025379586058> You've already collected your daily reward\n\nCollect it again in ${time.hours}h ${time.minutes}m ${time.seconds}s `);
+    .setDescription(`<:arzeus_cross:804612025379586058>| You've already collected your daily reward\n\nCollect it again in ${time.hours}h ${time.minutes}m ${time.seconds}s `);
     message.channel.send(timeEmbed)
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
