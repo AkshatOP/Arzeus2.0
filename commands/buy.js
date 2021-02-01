@@ -156,7 +156,7 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New Car For 40000 <:arzeus_coin:804370629654347788>`);
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New House For 40000 <:arzeus_coin:804370629654347788>`);
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 40000)
         message.channel.send(Embed3)
@@ -176,7 +176,7 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New Car For 40000 <:arzeus_coin:804370629654347788>`);
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a Designer-Suit For 40000 <:arzeus_coin:804370629654347788>`);
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 6000)
         message.channel.send(Embed3)
@@ -192,17 +192,122 @@ module.exports.run = async (bot, message, args) => {
         if (author < 6000) return message.channel.send(Embed2)
        
         db.fetch(`tshirt_${message.guild.id}_${user.id}`)
-        db.add(`car_${message.guild.id}_${user.id}`, 1)
+        db.add(`tshirt_${message.guild.id}_${user.id}`, 1)
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New Car For 3000 <:arzeus_coin:804370629654347788>`);
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New T-shirt For 3000 <:arzeus_coin:804370629654347788>`);
 
-        db.subtract(`money_${message.guild.id}_${user.id}`, 6000)
+        db.subtract(`money_${message.guild.id}_${user.id}`, 3000)
+        message.channel.send(Embed3)
+                 
+                 
+                 //SHOES//
+                 
+                  
+               } else if(args[0] == 'shoes') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 1000 <:arzeus_coin:804370629654347788> to purchase a new house`);
+
+        if (author < 1000) return message.channel.send(Embed2)
+       
+        db.fetch(`shoes_${message.guild.id}_${user.id}`)
+        db.add(`shoes_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a pair of shoes For 1000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 1000)
         message.channel.send(Embed3)
            
            
-      
+      //HAMSTER//
+                 
+                 
+                    } else if(args[0] == 'hamster') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 2000 <:arzeus_coin:804370629654347788> to purchase a new hamster`);
+
+        if (author < 2000) return message.channel.send(Embed2)
+       
+        db.fetch(`hamster_${message.guild.id}_${user.id}`)
+        db.add(`hamster_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a new hamster For 2000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 2000)
+        message.channel.send(Embed3)
+           
+                      
+                      
+                      //FISH//
+                      
+                        } else if(args[0] == 'fish') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 4000 <:arzeus_coin:804370629654347788> to purchase a new aquarium with fishes`);
+
+        if (author < 4000) return message.channel.send(Embed2)
+       
+        db.fetch(`fish_${message.guild.id}_${user.id}`)
+        db.add(`fish_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased an aquarium with fishes For 4000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 4000)
+        message.channel.send(Embed3)
+                          
+                          
+                          //DOG//
+                          
+                          
+                            } else if(args[0] == 'dog') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 10000 <:arzeus_coin:804370629654347788> to purchase a new Dog`);
+
+        if (author < 10000) return message.channel.send(Embed2)
+       
+        db.fetch(`dog_${message.guild.id}_${user.id}`)
+        db.add(`dog_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a new Dog For 10000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 10000)
+        message.channel.send(Embed3)
+                              
+                              
+                              //CAT//
+                              
+                              
+                                } else if(args[0] == 'cat') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 1000 <:arzeus_coin:804370629654347788> to purchase a new Cat`);
+
+        if (author < 6000) return message.channel.send(Embed2)
+       
+        db.fetch(`cat_${message.guild.id}_${user.id}`)
+        db.add(`cat_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a pair of shoes For 6000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 6000)
+        message.channel.send(Embed3)
+                 
+                 
+                 
     } else if(args[0] == 'snipe_pass') {
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
