@@ -7,15 +7,16 @@ module.exports.run = async (bot, message, args, utils) => {
   let user = message.mentions.members.first() || message.author;
 
   let bal = db.fetch(`money_${message.guild.id}_${user.id}`)
-
   if (bal === null) bal = 0;
 
   let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`)
   if (bank === null) bank = 0;
+  
+  let networth = bal + bank;
 
   let moneyEmbed = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`**${user}'s Balance**\n\nWallet: ${bal} <:arzeus_coin:804370629654347788>\nBank: ${bank} <:arzeus_coin:804370629654347788>`);
+  .setDescription(`**${user}'s Balance**\n\nWallet: ${bal} <:arzeus_coin:804370629654347788>\nBank: ${bank} <:arzeus_coin:804370629654347788>\nNetWorth: ${networth}`);
   message.channel.send(moneyEmbed)
 };
 
