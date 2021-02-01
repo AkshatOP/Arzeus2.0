@@ -1,4 +1,4 @@
-const slotItems = ["<:Grape:618765748940177421>", "<:Watermelon:618765904318038027>", "<:Orange:618765805596835880>", "<:Apple:618765871862513695>", "<:7_:618765717499805706>", "<:Strawberry:618765828929617930>", "<:Cherry:618765778094784513>"];
+const slotItems = ["🍇", "🍉", "🍍", "🍎", "🍊", "🍓", "🍒"];
 const db = require("quick.db");
 const Discord = require('discord.js');
 
@@ -12,11 +12,11 @@ module.exports.run = async (bot, message, args) => {
 
     let moneymore = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:Cross:618736602901905418> You are betting more than you have`);
+    .setDescription(`<:arzeus_cross:804612025379586058>| You are betting more than you have`);
 
     let moneyhelp = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:Cross:618736602901905418> Specify an amount`);
+    .setDescription(`<:arzeus_cross:804612025379586058>| Specify an amount`);
 
     if (!money) return message.channel.send(moneyhelp);
     if (money > moneydb) return message.channel.send(moneymore);
@@ -49,5 +49,5 @@ module.exports.run = async (bot, message, args) => {
   
   module.exports.help = {
     name:"slots",
-    aliases: ["sl"]
+    aliases: [""]
   }
