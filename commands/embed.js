@@ -17,10 +17,10 @@ module.exports.run = async (bot, message, args) => {
 
   // let color = message.content.split(" ").slice(1).join(" ")
   
-  let title = message.content.split(" ").slice(1).join(" ")
+ // let title = message.content.split(" ").slice(1).join(" ")
     
  
-  let say = title.split(" ").slice(1).join(" ")
+  let say = message.content.split(" ").slice(1).join(" ")
 
   if(!say) return message.channel.send(`❌ | `+"I Cannot Repeat Blank Message")
   
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 
   let embed = new Discord.MessageEmbed()
 
-  .setTitle(title || null)
+//  .setTitle(title || null)
 
   .setDescription(`${say}`)
 
@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
 
 //.setFooter(`Embed by:- ${message.author}`)
 
-//.setTimestamp()
+.setTimestamp()
 
   message.channel.send(embed)
 
