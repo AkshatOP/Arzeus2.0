@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
     let Embed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 <:arzeus_coin:804370629654347788> to purchase <@&804991402525327420> role`);
+    .setDescription(`<a:cross:805816169973809203>| You need 30000 <:arzeus_coin:804370629654347788> to purchase <@&804991402525327420> role`);
 
   
     if (args[0] == 'giratina') {
@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
         let Embed2 = new Discord.MessageEmbed()
 
         .setColor('GOLD')
-        .setDescription(`<:arzeus_cross:804612025379586058> You need 40K <:arzeus_coin:804370629654347788> to purchase <@&805087249167155220> role`);
+        .setDescription(`<a:cross:805816169973809203>| You need 40K <:arzeus_coin:804370629654347788> to purchase <@&805087249167155220> role`);
 
         if (author < 40000) return message.channel.send(Embed2)
        
@@ -92,7 +92,7 @@ module.exports.run = async (bot, message, args) => {
       
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD") 
-      .setDescription(`<:arzeus_cross:804612025379586058> You need 50K <:arzeus_coin:804370629654347788> to purchase <@&805087273040609292> role`);
+      .setDescription(`<a:cross:805816169973809203>|You need 50K <:arzeus_coin:804370629654347788> to purchase <@&805087273040609292> role`);
 
 
         if (author < 50000) return message.channel.send(Embed2)

@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
   
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<a:cross:805816169973809203> You've already begged recently\n\nBeg again in **${time.minutes}m ${time.seconds}s** `);
+    .setDescription(`<a:cross:805816169973809203>| You've already begged recently\n\nBeg again in **${time.minutes}m ${time.seconds}s** `);
     message.channel.send(timeEmbed)
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
