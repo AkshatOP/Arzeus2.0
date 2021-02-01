@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
 //.setFooter(`Embed by:- ${message.author}`)
 
 .setTimestamp()
-
+.setThumbnail("https://cdn.discordapp.com/avatars/804254260308082719/4f345b974bc5643d4886bfb4a67f2ed0.png?size=1024")
   message.channel.send(embed)
 
   message.delete()

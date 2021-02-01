@@ -54,7 +54,8 @@ module.exports.run = async (bot, message, args) => {
 
   let moneyEmbed = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`**${user}'s Profile**\n\nWallet: ${money} <:arzeus_coin:804370629654347788>\nBank: ${bank} <:arzeus_coin:804370629654347788>\n**VIP Roles**\n\nGiratina: ${giratina}\nPalkia: ${palkia}\nDialga: ${dialga}\n\n**Inventory**\n\nShoes: ${shoes}\nCars: ${car}\nHouses: ${house}\nT-Shirts: ${tshirt}\nSuits: ${designersuit}\n\n**PETS**\n\nHamsters: ${hamster}\nFishes: ${fish}\nCats: ${cat}\nDogs: ${dog}`);
+  .setDescription(`**${user}'s Profile**\n\nWallet: ${money} <:arzeus_coin:804370629654347788>\nBank: ${bank} <:arzeus_coin:804370629654347788>\n**VIP Roles**\n\nGiratina: ${giratina}\nPalkia: ${palkia}\nDialga: ${dialga}\n\n**Inventory**\n\nShoes: ${shoes}\nCars: ${car}\nHouses: ${house}\nT-Shirts: ${tshirt}\nSuits: ${designersuit}\n\n**PETS**\n\nHamsters: ${hamster}\nFishes: ${fish}\nCats: ${cat}\nDogs: ${dog}`)
+  .setThumbnail(user.AvatarURL)
   message.channel.send(moneyEmbed)
 };
 
