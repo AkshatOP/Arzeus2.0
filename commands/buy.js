@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("GOLD")
     .setDescription(`<:arzeus_cross:804612025379586058> You need 30000 <:arzeus_coin:804370629654347788> to purchase <@&804991402525327420> role`);
 
+  
     if (args[0] == 'giratina') {
         if (author < 30000) return message.channel.send(Embed)
         
@@ -19,11 +20,6 @@ module.exports.run = async (bot, message, args) => {
         db.set(`giratina_${message.guild.id}_${user.id}`, true)
       
        message.member.roles.add("804991402525327420").catch((e) => console.log(e));
-  //  message.channel.send(
-    //  `The role <@&804991402525327420> has been added to ${user}.`
-   // );
-      
-      
 
 
 
@@ -46,6 +42,10 @@ module.exports.run = async (bot, message, args) => {
 
   let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
   sChannel.send(embed91); 
+      
+      
+      //PALKIA//
+      
       
       
     } else if(args[0] == 'palkia') {
@@ -80,6 +80,9 @@ module.exports.run = async (bot, message, args) => {
 
   let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
   sChannel.send(embed92); 
+      
+      
+      //DIALGA//
       
       
     } else if(args[0] == 'dialga') {
@@ -118,6 +121,87 @@ module.exports.run = async (bot, message, args) => {
   sChannel.send(embed93);
       
       
+      //CAR//
+      
+      
+     } else if(args[0] == 'car') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 20000 <:arzeus_coin:804370629654347788> to purchase a new car`);
+
+        if (author < 20000) return message.channel.send(Embed2)
+       
+        db.fetch(`car_${message.guild.id}_${user.id}`)
+        db.add(`car_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New Car For 20000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 20000)
+        message.channel.send(Embed3)
+       
+       
+        //HOUSE//
+       
+         } else if(args[0] == 'house') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 40000 <:arzeus_coin:804370629654347788> to purchase a new house`);
+
+        if (author < 40000) return message.channel.send(Embed2)
+       
+        db.fetch(`house_${message.guild.id}_${user.id}`)
+        db.add(`house_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New Car For 40000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 40000)
+        message.channel.send(Embed3)
+           
+           
+           //DESIGNER SUIT//
+           
+            } else if(args[0] == 'designer_suit') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 6000 <:arzeus_coin:804370629654347788> to purchase a new house`);
+
+        if (author < 6000) return message.channel.send(Embed2)
+       
+        db.fetch(`designersuit_${message.guild.id}_${user.id}`)
+        db.add(`designersuit_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New Car For 40000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 6000)
+        message.channel.send(Embed3)
+              
+              
+              //T-SHIRT//
+              
+               } else if(args[0] == 't-shirt') {
+        let Embed2 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_cross:804612025379586058> You need 3000 <:arzeus_coin:804370629654347788> to purchase a new house`);
+
+        if (author < 6000) return message.channel.send(Embed2)
+       
+        db.fetch(`tshirt_${message.guild.id}_${user.id}`)
+        db.add(`car_${message.guild.id}_${user.id}`, 1)
+
+        let Embed3 = new Discord.MessageEmbed()
+        .setColor("GOLD")
+        .setDescription(`<:arzeus_tick:804612374518169620> Purchased a New Car For 3000 <:arzeus_coin:804370629654347788>`);
+
+        db.subtract(`money_${message.guild.id}_${user.id}`, 6000)
+        message.channel.send(Embed3)
+           
+           
       
     } else if(args[0] == 'snipe_pass') {
         let Embed2 = new Discord.MessageEmbed()
