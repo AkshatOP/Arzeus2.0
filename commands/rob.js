@@ -26,7 +26,7 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
 
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:arzeus_cross:804612025379586058> You have already robbed someone\n\nTry again in ${time.minutes}m ${time.seconds}s `);
+    .setDescription(`<a:cross:805816169973809203>| You have already robbed someone\n\nTry again in ${time.minutes}m ${time.seconds}s `);
     message.channel.send(timeEmbed)
   } else {
     

@@ -11,28 +11,28 @@ module.exports.run = async (bot, message, args) => {
 
   let embed1 = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`<:arzeus_cross:804612025379586058> Mention someone to pay`);
+  .setDescription(`<a:cross:805816169973809203>| Mention someone to pay`);
 
   if (!user) {
       return message.channel.send(embed1)
   }
   let embed2 = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`<:arzeus_cross:804612025379586058> Specify an amount to pay`);
+  .setDescription(`<a:cross:805816169973809203>| Specify an amount to pay`);
   
   if (!args[1]) {
       return message.channel.send(embed2)
   }
   let embed3 = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`<:arzeus_cross:804612025379586058> You can't pay someone negative money`);
+  .setDescription(`<a:cross:805816169973809203>| You can't pay someone negative money`);
 
   if (message.content.includes('-')) { 
       return message.channel.send(embed3)
   }
   let embed4 = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`<:arzeus_cross:804612025379586058> You don't have that much money`);
+  .setDescription(`<a:cross:805816169973809203>| You don't have that much money`);
 
   if (member < args[1]) {
       return message.channel.send(embed4)

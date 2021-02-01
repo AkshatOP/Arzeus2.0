@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
   
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<:arzeus_cross:804612025379586058>| You've already collected your daily reward\n\nCollect it again in ${time.hours}h ${time.minutes}m ${time.seconds}s `);
+    .setDescription(`<a:cross:805816169973809203>| You've already collected your daily reward\n\nCollect it again in ${time.hours}h ${time.minutes}m ${time.seconds}s `);
     message.channel.send(timeEmbed)
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
 } else {
   let notvote = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription("<:arzeus_cross:804612025379586058>| You can't use this command until you have voted the server. Vote us by typing `vt!vote`");
+  .setDescription("<a:cross:805816169973809203>| You can't use this command until you have voted the server. Vote us by typing `vt!vote`");
   message.channel.send(notvote)
 }
 }
