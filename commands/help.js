@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     //.addField("My Prefix is **Az!**","")
     //.addField("•────────────────────────────•","")
     .setDescription(`•────────────────────────────•\nMy Prefix is **Az!**\n•────────────────────────────•`)
-    .addField("> <:pikasip:803606908103032852> **1. General Commands**","`Ping`,`info <user>`,`afk`,`back`,`avatar <user>`,`embed`")
+    .addField("> <:pikasip:803606908103032852> **1. General Commands**","`Ping`,`info <user>`,`afk`,`back`,`avatar <user>`,`embed`,`uptime`")
     .addField("> <a:server:805812169521889340> **2. Server Commands**", "`staff`, `rules for staff`,`order`,`apply`,`vote`")//itna fast kaisai ;-;
     .addField("> <a:moneyaabag:802503275085299752> **3. Economy Commands**", "`work`,`beg`,`rob`,`pay`,`balance`,`profile`,`withdraw`,`deposit`,`daily`,`weekly`,`store`,`buy` ")
     .addField("> <a:paisa:805769554470633482> **4. Gambling Commmands**", "`slots`")
