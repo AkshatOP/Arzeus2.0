@@ -31,7 +31,10 @@ module.exports.run = async (bot, message, args) => {
 
   }
 } else {
-  message.channel.send("boost us to use  command") 
+ let notboost = new Discord.MessageEmbed()
+  .setColor("GOLD")
+  .setDescription("<a:cross:805816169973809203>| You can't use this command until you have boosted the server.");
+  message.channel.send(notboost) 
   }
   };
 

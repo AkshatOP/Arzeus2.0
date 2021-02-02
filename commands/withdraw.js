@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
 
   let embed5 = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`<a:tick:805814130304483358>|You have withdrawn ${args[0]} coins from your bank`);
+  .setDescription(`<a:tick:805814130304483358>|You have withdrawn ${args[0]} <:arzeus_coin:804370629654347788> from your bank`);
 
   message.channel.send(embed5)
   db.subtract(`bank_${message.guild.id}_${user.id}`, args[0])
