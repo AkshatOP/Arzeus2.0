@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
     let Embed = new Discord.MessageEmbed()
     .setColor("GOLD")
-    .setDescription(`<a:cross:805816169973809203>| You need 30000 <:arzeus_coin:804370629654347788> to purchase <@&804991402525327420> role`);
+    .setDescription(`<a:cross:805816169973809203>| You need 30000 <:arzeus_coin:804370629654347788> to purchase <@&806175485444751450> role`);
 
   
     if (args[0] == 'giratina') {
@@ -21,13 +21,13 @@ module.exports.run = async (bot, message, args) => {
         db.fetch(`giratina_${message.guild.id}_${user.id}`);
         db.set(`giratina_${message.guild.id}_${user.id}`, tick)
       
-       message.member.roles.add("804991402525327420").catch((e) => console.log(e));
+       message.member.roles.add("806175485444751450").catch((e) => console.log(e));
 
 
 
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased giratina role For 30K <:arzeus_coin:804370629654347788>\n The role <@&804991402525327420> has been added to ${user}.`);
+        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased giratina role For 30K <:arzeus_coin:804370629654347788>\n The role <@&806175485444751450> has been added to ${user}.`);
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 30000)
         message.channel.send(Embed2)
@@ -36,13 +36,13 @@ module.exports.run = async (bot, message, args) => {
        let embed91 = new Discord.MessageEmbed()
     .setColor('GOLD')
     .setTitle(`**__ITEM BOUGHT__**`)
-    .setDescription(`${user} has bought the <@&804991402525327420> role`)
+    .setDescription(`${user} has bought the <@&806175485444751450> role`)
     .setThumbnail(user.avatarURL())
     .addField(`Bought Date - ${message.createdAt}`)
     .setTimestamp()
    
 
-  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "rolelogs" )
   sChannel.send(embed91); 
       
       
@@ -54,18 +54,18 @@ module.exports.run = async (bot, message, args) => {
         let Embed2 = new Discord.MessageEmbed()
 
         .setColor('GOLD')
-        .setDescription(`<a:cross:805816169973809203>| You need 40K <:arzeus_coin:804370629654347788> to purchase <@&805087249167155220> role`);
+        .setDescription(`<a:cross:805816169973809203>| You need 40K <:arzeus_coin:804370629654347788> to purchase <@&806175287573348478> role`);
 
         if (author < 40000) return message.channel.send(Embed2)
        
         db.fetch(`palkia_${message.guild.id}_${user.id}`)
         db.set(`palkia_${message.guild.id}_${user.id}`, tick)
       
-      message.member.roles.add("805087249167155220").catch((e) => console.log(e));
+      message.member.roles.add("806175287573348478").catch((e) => console.log(e));
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")       
-        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased palkia role For 40K <:arzeus_coin:804370629654347788>\n The role <@&805087249167155220> has been added to ${user}.`);  
+        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased palkia role For 40K <:arzeus_coin:804370629654347788>\n The role <@&806175287573348478> has been added to ${user}.`);  
       
         db.subtract(`money_${message.guild.id}_${user.id}`, 40000)
         message.channel.send(Embed3)
@@ -74,13 +74,13 @@ module.exports.run = async (bot, message, args) => {
       let embed92 = new Discord.MessageEmbed()
     .setColor('GOLD')
     .setTitle(`**__ITEM BOUGHT__**`)
-    .setDescription(`${user} has bought the <@&805087249167155220> role`)
+    .setDescription(`${user} has bought the <@&806175287573348478> role`)
     .setThumbnail(user.avatarURL())
     .addField(`Bought Date - ${message.createdAt}`)
     .setTimestamp()
    
 
-  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "rolelogs" )
   sChannel.send(embed92); 
       
       
@@ -92,7 +92,7 @@ module.exports.run = async (bot, message, args) => {
       
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD") 
-      .setDescription(`<a:cross:805816169973809203>|You need 50K <:arzeus_coin:804370629654347788> to purchase <@&805087273040609292> role`);
+      .setDescription(`<a:cross:805816169973809203>|You need 50K <:arzeus_coin:804370629654347788> to purchase <@&806175384232132619> role`);
 
 
         if (author < 50000) return message.channel.send(Embed2)
@@ -100,11 +100,11 @@ module.exports.run = async (bot, message, args) => {
         db.fetch(`dialga_${message.guild.id}_${user.id}`)
         db.set(`dialga_${message.guild.id}_${user.id}`, tick)
       
-       message.member.roles.add("805087273040609292").catch((e) => console.log(e));
+       message.member.roles.add("806175384232132619").catch((e) => console.log(e));
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")
-         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Dialga role For 50K <:arzeus_coin:804370629654347788>\n The role <@&805087273040609292> has been added to ${user}.`);  
+         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Dialga role For 50K <:arzeus_coin:804370629654347788>\n The role <@&806175384232132619> has been added to ${user}.`);  
  
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 50000)
@@ -113,13 +113,13 @@ module.exports.run = async (bot, message, args) => {
           let embed93 = new Discord.MessageEmbed()
     .setColor('GOLD')
     .setTitle(`**__ITEM BOUGHT__**`)
-    .setDescription(`${user} has bought the <@&805087273040609292> role`)
+    .setDescription(`${user} has bought the <@&806175384232132619> role`)
     .setThumbnail(user.avatarURL())
     .addField(`Bought Date - ${message.createdAt}`)
     .setTimestamp()
    
 
-  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "rolelogs" )
   sChannel.send(embed93);
       
       
@@ -320,11 +320,11 @@ module.exports.run = async (bot, message, args) => {
         db.fetch(`snipepass_${message.guild.id}_${user.id}`)
         db.set(`snipepass_${message.guild.id}_${user.id}`, true)
       
-      message.member.roles.add("805265307785887775").catch((e) => console.log(e));
+      message.member.roles.add("801723387100921856").catch((e) => console.log(e));
 
         let Embed4 = new Discord.MessageEmbed()
         .setColor("GOLD")
-         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 90K <:arzeus_coin:804370629654347788>\n The role <@&805265307785887775> has been added to ${user}.`);  
+         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 90K <:arzeus_coin:804370629654347788>\n The role <@&801723387100921856> has been added to ${user}.`);  
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 90000)
         message.channel.send(Embed4)
@@ -333,13 +333,13 @@ module.exports.run = async (bot, message, args) => {
        let embed94 = new Discord.MessageEmbed()
     .setColor('GOLD')
     .setTitle(`**__ITEM BOUGHT__**`)
-    .setDescription(`${user} has bought the <@&805265307785887775> role`)
+    .setDescription(`${user} has bought the <@&801723387100921856> role`)
     .setThumbnail(user.avatarURL())
     .addField(`Bought Date - ${message.createdAt}`)
     .setTimestamp()
    
 
-  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "rolelogs" )
   sChannel.send(embed94);
       
       
@@ -353,11 +353,11 @@ module.exports.run = async (bot, message, args) => {
         db.fetch(`spampass_${message.guild.id}_${user.id}`)
         db.set(`spampass_${message.guild.id}_${user.id}`, true)
       
-      message.member.roles.add("805303705590693939").catch((e) => console.log(e));
+      message.member.roles.add("801723385465012264").catch((e) => console.log(e));
 
         let Embed5 = new Discord.MessageEmbed()
         .setColor("GOLD")
-         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 80K <:arzeus_coin:804370629654347788>\n The role <@&805303705590693939> has been added to ${user}.`);  
+         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 80K <:arzeus_coin:804370629654347788>\n The role <@&801723385465012264> has been added to ${user}.`);  
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 80000)
         message.channel.send(Embed5)
@@ -366,48 +366,16 @@ module.exports.run = async (bot, message, args) => {
        let embed95 = new Discord.MessageEmbed()
     .setColor('GOLD')
     .setTitle(`**__ITEM BOUGHT__**`)
-    .setDescription(`${user} has bought the <@&805303705590693939> role`)
+    .setDescription(`${user} has bought the <@&801723385465012264> role`)
     .setThumbnail(user.avatarURL())
     .addField(`Bought Date - ${message.createdAt}`)
     .setTimestamp()
    
 
-  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
+  let sChannel = message.guild.channels.cache.find((c) => c.name === "rolelogs" )
   sChannel.send(embed95);
          
          
-              } else if(args[0] == 'spam_pass') {
-         let Embed2 = new Discord.MessageEmbed()
-        .setColor("GOLD")
-        .setDescription(`<a:cross:805816169973809203>| You need 250000 <:arzeus_coin:804370629654347788> to purchase owner respect role`);
-
-        if (author < 250000) return message.channel.send(Embed2)
-       
-        db.fetch(`ownerresprectrole_${message.guild.id}_${user.id}`)
-        db.set(`ownerrespectrole_${message.guild.id}_${user.id}`, true)
-      
-      message.member.roles.add("805305458628886528").catch((e) => console.log(e));
-
-        let Embed6 = new Discord.MessageEmbed()
-        .setColor("GOLD")
-         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Owner Respect Role For 250K <:arzeus_coin:804370629654347788>\n The role <@&805305458628886528> has been added to ${user}.`);  
-
-        db.subtract(`money_${message.guild.id}_${user.id}`, 250000)
-        message.channel.send(Embed6)
-      
-      
-       let embed96 = new Discord.MessageEmbed()
-    .setColor('GOLD')
-    .setTitle(`**__ITEM BOUGHT__**`)
-    .setDescription(`${user} has bought the <@&805305458628886528> role`)
-    .setThumbnail(user.avatarURL())
-    .addField(`Bought Date - ${message.createdAt}`)
-    .setTimestamp()
-   
-
-  let sChannel = message.guild.channels.cache.find((c) => c.name === "logs" )
-  sChannel.send(embed96);
-      
     } else {
         let embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")

@@ -5,7 +5,7 @@ const ms = require("parse-ms");
 module.exports.run = async (bot, message, args) => {
  // if(!message.content.startsWith('e!'))return;  
 
-  if (message.member.roles.cache.has("805785849961775164")) {
+  if (message.member.roles.cache.has("801723375356739594")) {
   
   let user = message.author;
 
