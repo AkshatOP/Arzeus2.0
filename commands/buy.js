@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed2 = new Discord.MessageEmbed()
         .setColor("GOLD")
-        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased giratina role For 30K <:arzeus_coin:804370629654347788>\n The role <@&806175485444751450> has been added to ${user}.`);
+        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased giratina role For 30000 <:arzeus_coin:804370629654347788>\n The role <@&806175485444751450> has been added to ${user}.`);
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 30000)
         message.channel.send(Embed2)
@@ -65,7 +65,7 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")       
-        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased palkia role For 40K <:arzeus_coin:804370629654347788>\n The role <@&806175287573348478> has been added to ${user}.`);  
+        .setDescription(`<a:tick:805814130304483358>| ${user} Purchased palkia role For 40000 <:arzeus_coin:804370629654347788>\n The role <@&806175287573348478> has been added to ${user}.`);  
       
         db.subtract(`money_${message.guild.id}_${user.id}`, 40000)
         message.channel.send(Embed3)
@@ -104,7 +104,7 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed3 = new Discord.MessageEmbed()
         .setColor("GOLD")
-         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Dialga role For 50K <:arzeus_coin:804370629654347788>\n The role <@&806175384232132619> has been added to ${user}.`);  
+         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Dialga role For 50000 <:arzeus_coin:804370629654347788>\n The role <@&806175384232132619> has been added to ${user}.`);  
  
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 50000)
@@ -324,7 +324,7 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed4 = new Discord.MessageEmbed()
         .setColor("GOLD")
-         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 90K <:arzeus_coin:804370629654347788>\n The role <@&801723387100921856> has been added to ${user}.`);  
+         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 90000 <:arzeus_coin:804370629654347788>\n The role <@&801723387100921856> has been added to ${user}.`);  
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 90000)
         message.channel.send(Embed4)
@@ -357,7 +357,7 @@ module.exports.run = async (bot, message, args) => {
 
         let Embed5 = new Discord.MessageEmbed()
         .setColor("GOLD")
-         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 80K <:arzeus_coin:804370629654347788>\n The role <@&801723385465012264> has been added to ${user}.`);  
+         .setDescription(`<a:tick:805814130304483358>| ${user} Purchased Snipe pass(1 week) For 80000 <:arzeus_coin:804370629654347788>\n The role <@&801723385465012264> has been added to ${user}.`);  
 
         db.subtract(`money_${message.guild.id}_${user.id}`, 80000)
         message.channel.send(Embed5)

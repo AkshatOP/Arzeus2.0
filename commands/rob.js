@@ -12,12 +12,8 @@ exports.run = async (bot, message, args) => {
     let author2 = await db.fetch(`rob_${message.guild.id}_${message.author.id}`)//fetch last robbed
 
     
-    if (!user) {
-        return message.channel.send('Sorry, you forgot to mention somebody.')
-    } 
-      if(user == `${message.author}`) {
-        return message.channel.send(`u can't rob urself dumb`)
-    } else {
+   
+      
     
     let timeout = 20000;
 
@@ -35,7 +31,7 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
         return message.channel.send('<a:cross:805816169973809203>| You need atleast 250 <:arzeus_coin:804370629654347788> to rob somebody.')
     }
 
-    if (targetuser < 0) { // if mentioned user has 0 or less, it will return this.
+    if (targetuser < 1) { // if mentioned user has 0 or less, it will return this.
         return message.channel.send(`<a:cross:805816169973809203>| ${user.user.username} does not have anything to rob.`)
     }
     
@@ -57,7 +53,7 @@ if (author2 !== null && timeout - (Date.now() - author2) > 0) {
     db.set(`rob_${message.guild.id}_${message.author.id}`, Date.now())
 }
     }
-}
+
     
 
 module.exports.help = {
