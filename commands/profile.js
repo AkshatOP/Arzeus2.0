@@ -11,6 +11,8 @@ module.exports.run = async (bot, message, args) => {
 
   let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`)
   if (bank === null) bank = 0;
+  
+  let networth = money + bank;
 
  /* let vip = await db.fetch(`giratina_${message.guild.id}_${user.id}`)
     if(vip === null) vip = 'None'
@@ -54,8 +56,9 @@ module.exports.run = async (bot, message, args) => {
 
   let moneyEmbed = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription(`**${user}'s Profile**\n\nWallet: ${money} <:arzeus_coin:804370629654347788>\nBank: ${bank} <:arzeus_coin:804370629654347788>\n**VIP Roles**\n\nGiratina: ${giratina}\nPalkia: ${palkia}\nDialga: ${dialga}\n\n**Inventory**\n\nShoes: ${shoes}\nCars: ${car}\nHouses: ${house}\nT-Shirts: ${tshirt}\nSuits: ${designersuit}\n\n**PETS**\n\nHamsters: ${hamster}\nFishes: ${fish}\nCats: ${cat}\nDogs: ${dog}`)
-  .setThumbnail(user.AvatarURL)
+ // .setDescription(`**${user}'s Profile**\n\nWallet: ${money} <:arzeus_coin:804370629654347788>\nBank: ${bank} <:arzeus_coin:804370629654347788>\n**VIP Roles**\n\nGiratina: ${giratina}\nPalkia: ${palkia}\nDialga: ${dialga}\n\n**Inventory**\n\nShoes: ${shoes}\nCars: ${car}\nHouses: ${house}\nT-Shirts: ${tshirt}\nSuits: ${designersuit}\n\n**PETS**\n\nHamsters: ${hamster}\nFishes: ${fish}\nCats: ${cat}\nDogs: ${dog}`)
+  .addField(`**1.<a:paisaa:806007163671019600>Cash**`, `<a:fly_cash:805778411788173313>Wallet: ${money} <:arzeus_coin:804370629654347788>\n<a:moneyaabag:802503275085299752>Bank: ${bank} <:arzeus_coin:804370629654347788>\n<a:golden_credit_card:805777673620160532>NetWorth: ${networth} <:arzeus_coin:804370629654347788>`)
+  .setThumbnail(user.avatarURL())
   message.channel.send(moneyEmbed)
 };
 
