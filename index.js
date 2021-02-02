@@ -29,7 +29,7 @@ fs.readdir("./commands/", (err, files) => {
 })
 
   bot.on("ready", ready => {
-bot.user.setActivity(`ARZEUS 2.0`, {
+bot.user.setActivity(`ARZEUS 2.0 || Az!help`, {
 
 type: "STREAMING",
 
