@@ -20,6 +20,17 @@ module.exports.run = async (bot, message, args) => {
   .setDescription(`<a:tick:805814130304483358>| You have withdrawn all your coins from your bank`);
   message.channel.send(embed5)
   
+  } else   if (args[0] == 'max') {
+    let money = await db.fetch(`bank_${message.guild.id}_${user.id}`)
+    
+    db.subtract(`bank_${message.guild.id}_${user.id}`, money)
+    db.add(`money_${message.guild.id}_${user.id}`, money)
+    let embed5 = new Discord.MessageEmbed()
+  .setColor("GOLD")
+  .setDescription(`<a:tick:805814130304483358>| You have withdrawn all your coins from your bank`);
+  message.channel.send(embed5)
+ 
+  
   } else {
 
   let embed2 = new Discord.MessageEmbed()
