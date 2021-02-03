@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
 } else {
   let notvote = new Discord.MessageEmbed()
   .setColor("GOLD")
-  .setDescription("<a:cross:805816169973809203>| You can't use this command until you have voted the server. Vote us by typing `vt!vote`");
+  .setDescription("<a:cross:805816169973809203>| You can't use this command until you have voted the server. Vote us by typing `Az!vote`");
   message.channel.send(notvote)
 }
 }
