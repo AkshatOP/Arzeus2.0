@@ -39,17 +39,26 @@ module.exports.run = async (bot, message, args) => {
   }
   
   if (args[1] == 'all') {
-    let money = await db.fetch(`money_${message.guild.id}_${user.id}`)
+    let money = await db.fetch(`money_${message.guild.id}_${member.id}`)
    // let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`)
 
     let embedbank = new Discord.MessageEmbed()
     .setColor('GOLD')
     .setDescription("<a:cross:805816169973809203>| You don't have any money to Pay")
 
-    if(money === 0) return message.channel.send(embedbank)
+    if(money === 0) {
+      return message.channel.send(embedbank)
 
+    } else{
+      
+  let embed5 = new Discord.MessageEmbed()
+  .setColor("GOLD")
+  .setDescription(`<a:tick:805814130304483358>| You have payed ${user.user.username} ${args[1]} <:arzeus_coin:804370629654347788> ${money}`);
+      
+      message.channel.send(embed5)
     db.add(`money_${message.guild.id}_${user.id}`, money)
     db.subtract(`money_${message.guild.id}_${message.author.id}`, money)
+  }
   }
 
   let embed5 = new Discord.MessageEmbed()
