@@ -39,7 +39,14 @@ module.exports.run = async (bot, message, args) => {
   }
   
   if (args[1] == 'all') {
-    let money = await db.fetch(`money_${message.guild.id}_${member.id}`)
+    let embed4 = new Discord.MessageEmbed()
+  .setColor("GOLD")
+  .setDescription(`<a:cross:805816169973809203>| You don't have that much money`);
+
+  if (member < args[1]) {
+      return message.channel.send(embed4)
+  }
+    let money = await db.fetch(`money_${message.guild.id}_${message.author.id}`)
    // let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`)
 
     let embedbank = new Discord.MessageEmbed()
