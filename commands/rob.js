@@ -15,7 +15,7 @@ exports.run = async (bot, message, args) => {
    
       
     
-    let timeout = 20000;
+    let timeout = 600000;
 
 if (author2 !== null && timeout - (Date.now() - author2) > 0) {
     let time = ms(timeout - (Date.now() - author2));
