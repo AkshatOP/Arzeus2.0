@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("> <a:server:805812169521889340> **2. Server Commands**", "`staff`, `rules for staff`,`order`,`apply`,`vote`")//itna fast kaisai ;-;
     .addField("> <a:moneyaabag:802503275085299752> **3. Economy Commands**", "`work`,`beg`,`rob`,`pay`,`balance`,`profile`,`withdraw`,`deposit`,`daily`,`weekly`,`store`,`buy` ")
     .addField("> <a:paisa:805769554470633482> **4. Gambling Commmands**", "`slots`")
-    .addField("> emoji **5. Fun Commands**", "`hug`,`kill`")
+    .addField("> emoji **5. Fun Commands**", "`hug`,`kill`,`math`")
    // .addField("> emoji **6. Levelling commands**", "`rank`")
     .setImage("https://cdn.discordapp.com/attachments/735352832701759560/737667554406825994/ars.gif")
     //.addField("> Economy Extra Commands", "`store`")

@@ -2,6 +2,9 @@ const Discord = require("discord.js");
 const math = require('discord-math');
 const db = require('quick.db')
 
+
+
+
 module.exports.run = async (bot, message, args) =>{
   
   //check if the setup server is the message send server
@@ -10,6 +13,9 @@ module.exports.run = async (bot, message, args) =>{
   //if(channelId !== message.channel.id) return message.reply(`Math command wont work here!!`) //is not then reurn this message
   
   //if its the setup channel then do its work :)
+  
+  
+  let user = message.author;
   
             let num1 = Number(args[0]);
             let operation = args[1];
@@ -21,12 +27,15 @@ module.exports.run = async (bot, message, args) =>{
  
             // message.channel.send(`Answer: ${math.calculate(num1, operation, num2)}`);
   
-message.channel.send(`Question : ${args.slice(0).join(" ")}`, `Answer: ${math.calculate(num1, operation, num2)} `) // + number1 + randomSign + number
+//message.channel.send(`Question : ${args.slice(0).join(" ")}`, `Answer: ${math.calculate(num1, operation, num2)} `) // + number1 + randomSign + number
   
   
  const Embed = new Discord.MessageEmbed()
   .setTitle(`Maths OP`)
-  .addField(`Question : ${args.slice(0).join(" ")}`, `Answer: ${math.calculate(num1, operation, num2)} `) // + number1 + randomSign + number2
+  .setDescription(`Question : **${args.slice(0).join(" ")}** \nAnswer: **${math.calculate(num1, operation, num2)}** `)
+  .setFooter(`${user.username}`)
+  .setTimestamp()
+ // .addField(`${user.mention} Question : ${args.slice(0).join(" ")}`, `Answer: ${math.calculate(num1, operation, num2)} `) // + number1 + randomSign + number2
   .setColor("#ffd700")
 
  message.channel.send(Embed);
