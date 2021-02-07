@@ -2,6 +2,7 @@ const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+const db = require('quick.db')
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -81,6 +82,40 @@ bot.on("message", message => {
    }
 });
 
+bot.on('message', async (message) => {
+         // if (message.author.bot || !message.guild) return;
+         // let prefix = 'Az.';
+         // if (message.content.startsWith(prefix)) {
+         // let messageArray = message.content.slice(prefix.length).split(" ");
+         // let command = messageArray[0];
+         // let args = messageArray.slice(1);
+         // let commandFile = bot.commands.get(command) || bot.commands.get(bot.aliases.get(command));
+          //if (commandFile) commandFile.run(bot, message, args, Discord, fs)
+         // } else {
+          //let check = bot.db.get(`check_${message.guild.id}`)
+           let check = db.get(`check_${message.guild.id}`)
+          if (check) {
+    let fetch = require('node-fetch')
+      fetch(`https://api.shadeoxide.gq/api/chatbot?message=${encodeURIComponent(message.content)}&name=TalkBot&gender=female&user=${message.author.id}&age=69`)
+        .then(res => res.json())
+        .then(async data => {
+          let lang = db.get(`language_${message.guild.id}`) || "english"
+          let translated = await translate(data.message, { to: lang });
+          let langcode = db.get(`languagecode_${message.guild.id}`) || "en-US"
+          message.member.voice.channel.join().then(conn => {
+            console.log(translated.text)
+            googleTTS(translated.text, langcode, 1)
+              .then((url) => {
+                conn.play(url)
+              })
+              .catch((err) => {
+                console.error(err);//.stack);
+              });
+          })
+        })
+  }
+  }
+  )
 
 
 
