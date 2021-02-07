@@ -1,6 +1,7 @@
 dependencies:
   '@discordjs/opus': 0.3.3
   '@k3rn31p4nic/google-translate-api': 1.1.1
+  discord-math: 1.0.5
   discord.js: 12.5.1
   express: 4.17.1
   fs: 0.0.2
@@ -373,6 +374,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
+  /discord-math/1.0.5:
+    dev: false
+    resolution:
+      integrity: sha512-4xh44vYe1LkQ/UbC9yGrVHGfowXkxOnq8dKvVrA2hME3gHMZbckmFSLpzBS0dhTqnL4MQnGDqLgG1UFeLmhEDw==
   /discord.js/12.5.1:
     dependencies:
       '@discordjs/collection': 0.1.6
@@ -1371,6 +1376,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@discordjs/opus': ^0.3.3
   '@k3rn31p4nic/google-translate-api': ^1.1.1
+  discord-math: ^1.0.4
   discord.js: ^12.4.0
   express: ^4.17.1
   fs: ^0.0.2

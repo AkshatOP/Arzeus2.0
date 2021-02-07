@@ -19,7 +19,8 @@
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
     "google-tts-api": "0.0.6",
     "node-fetch": "^2.6.1",
-    "@discordjs/opus": "^0.3.3"
+    "@discordjs/opus": "^0.3.3",
+    "discord-math": "^1.0.4"
   },
   "engines": {
     "node": "12.x"
