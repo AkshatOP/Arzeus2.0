@@ -21,12 +21,15 @@ module.exports.run = async (bot, message, args) =>{
  
             // message.channel.send(`Answer: ${math.calculate(num1, operation, num2)}`);
   
-
+message.channel.send(`Question : ${args.slice(0).join(" ")}`, `Answer: ${math.calculate(num1, operation, num2)} `) // + number1 + randomSign + number
+  
+  
  const Embed = new Discord.MessageEmbed()
   .setTitle(`Maths OP`)
   .addField(`Question : ${args.slice(0).join(" ")}`, `Answer: ${math.calculate(num1, operation, num2)} `) // + number1 + randomSign + number2
-  
-   message.channel.send(Embed);
+  .setColor("#ffd700")
+
+ message.channel.send(Embed);
  
   
  
