@@ -4,6 +4,9 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 const db = require('quick.db')
 
+const googleTTS = require('google-tts-api')
+const translate = require("@k3rn31p4nic/google-translate-api")
+
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
@@ -82,7 +85,7 @@ bot.on("message", message => {
    }
 });
 
-bot.on('message', async (message) => {
+/*bot.on('message', async (message) => {
          // if (message.author.bot || !message.guild) return;
          // let prefix = 'Az.';
          // if (message.content.startsWith(prefix)) {
@@ -109,13 +112,13 @@ bot.on('message', async (message) => {
                 conn.play(url)
               })
               .catch((err) => {
-                console.error(err);//.stack);
+                console.error(err.stack);//.stack);
               });
           })
         })
   }
   }
-  )
+  )*/
 
 
 
