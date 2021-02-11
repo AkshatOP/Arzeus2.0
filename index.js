@@ -64,7 +64,7 @@ url: "https://www.youtube.com/channel/UCF8EBnJskNhd-JON7D4CgpA"})
   bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    let prefix = process.env.prefix
+    let prefix = "Az!"
     let messageArray = message.content.split(" ");
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
@@ -137,4 +137,4 @@ bot.on("message", message => {
 
 
 
-bot.login(process.env.token);
+bot.login(`ODA0MjU0MjYwMzA4MDgyNzE5.YBJqJQ.epfykVhCbeDOoiidP9fx5bupH0s`);
