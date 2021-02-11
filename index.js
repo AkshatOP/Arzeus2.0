@@ -7,6 +7,21 @@ const db = require('quick.db')
 const googleTTS = require('google-tts-api')
 const translate = require("@k3rn31p4nic/google-translate-api")
 
+const express = require('express');
+
+const app = express();
+
+if (Number(process.version.slice(1).split(".")[0]) < 8) throw new Error("Node 8.0.0 or higher is required. Update Node on your system.");
+
+app.get("/", (request, response) => {
+  response.sendStatus(200);
+});
+app.listen(3000);
+setInterval(() => {
+  http.get(`http://arzeus2.glitch.me/`);
+}, 280000);
+
+
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
