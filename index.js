@@ -7,7 +7,7 @@ const db = require('quick.db')
 const googleTTS = require('google-tts-api')
 const translate = require("@k3rn31p4nic/google-translate-api")
 
-const express = require('express');
+/*const express = require('express');
 
 const app = express();
 
@@ -19,7 +19,7 @@ app.get("/", (request, response) => {
 app.listen(3000);
 setInterval(() => {
   http.get(`http://arzeus2.glitch.me/`);
-}, 280000);
+}, 280000);*/
 
 
 bot.commands = new Discord.Collection();
