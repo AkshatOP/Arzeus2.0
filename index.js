@@ -139,4 +139,4 @@ bot.on("message", message => {
 
 
 
-bot.login(`ODA0MjU0MjYwMzA4MDgyNzE5.YBJqJQ.epfykVhCbeDOoiidP9fx5bupH0s`);
+bot.login(TOKEN`);
